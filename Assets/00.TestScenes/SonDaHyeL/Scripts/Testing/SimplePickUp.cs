@@ -6,19 +6,18 @@
 
 using UnityEngine;
 
-public class Pickup : MonoBehaviour
+public class SimplePickup : MonoBehaviour
 {
     public float maxDistance = 10f;
     public float minDistance = 1f;
     public float scrollSpeed = 2f;
     private bool hasTriggered = false;
 
-    [SerializeField] private ScreenController screenController;
 
     private Camera playerCamera;
     private GameObject heldObject;
     private float holdDistance;
-    
+
     void Start()
     {
         playerCamera = Camera.main;
@@ -64,11 +63,7 @@ public class Pickup : MonoBehaviour
                 if (anim != null)
                     anim.enabled = false;
 
-                if (!hasTriggered && screenController != null)
-                {
-                    screenController.ActivateScreen();
-                    hasTriggered = true;
-                }
+            
             }
         }
     }
@@ -101,6 +96,7 @@ public class Pickup : MonoBehaviour
         {
             Vector3 targetPos = playerCamera.transform.position + playerCamera.transform.forward * holdDistance;
             heldObject.transform.position = targetPos;
+            heldObject.transform.rotation = Quaternion.identity;
         }
     }
 }
