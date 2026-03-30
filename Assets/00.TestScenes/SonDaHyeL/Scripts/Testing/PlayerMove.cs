@@ -1,3 +1,9 @@
+/*
+ * 작성자: 손다혜
+ * 작성일: 2026.03.21
+ * 역할: (테스트용) 키보드와 마우스로 플레이어의 움직임을 컨트롤하는 스크립트
+ */
+
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]

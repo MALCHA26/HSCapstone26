@@ -1,3 +1,9 @@
+/*
+ * 작성자: 손다혜
+ * 작성일: 2026.03.22
+ * 역할: Paper와 인쇄기 상호작용 시 머테리얼 변화 효과와 스크린의 페이드인-아웃 효과를 구현. 
+ */
+
 using UnityEngine;
 using System.Collections;
 
@@ -6,10 +12,12 @@ public class ScreenFader : MonoBehaviour
     private Material glassMaterial;
     private Material[] materials;
     private float fadeDuration;
-    private AudioClip clip;              // 재생할 오디오 클립
+    private AudioClip clip;            
 
     private MeshRenderer m_mesh;
     private AudioSource audioSource;
+
+    public ObjectSpawn spawner;
 
     void Awake()
     {
@@ -74,6 +82,9 @@ public class ScreenFader : MonoBehaviour
         // 모든 머티리얼 순회 후 글래스로 복귀
         m_mesh.material = glassMaterial;
         SetAlpha(0f);
+
+        spawner.Spawn();
+
     }
 
     private void SetAlpha(float a)

@@ -1,3 +1,9 @@
+/*
+ * 작성자: 손다혜
+ * 작성일: 2026.03.21
+ * 역할: UV 값을 이용한 머테리얼 텍스쳐 회전 효과 구현
+ */
+
 using UnityEngine;
 
 public class MoveTexture : MonoBehaviour

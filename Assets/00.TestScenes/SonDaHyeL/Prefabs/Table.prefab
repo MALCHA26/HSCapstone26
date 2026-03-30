@@ -46,9 +46,10 @@ GameObject:
   - component: {fileID: 2786086244571057558}
   - component: {fileID: 2786086244582514838}
   - component: {fileID: 8387280515723446995}
+  - component: {fileID: 6542832560434062968}
   m_Layer: 0
   m_Name: printer
-  m_TagString: Untagged
+  m_TagString: PRINTER
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -169,6 +170,27 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: d734e0f1e8152164f912667b484f1bb9, type: 3}
+--- !u!65 &6542832560434062968
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786086244572992342}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9689169, y: 1.0510447, z: 1.0677078}
+  m_Center: {x: -0.35583618, y: 0.44241354, z: 0.4031326}
 --- !u!1 &3347104985404354375
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,9 @@
+/*
+ * 작성자: 손다혜
+ * 작성일: 2026.03.22
+ * 역할: UI를 이용해 전체 화면 페이드인-아웃 효과 구현
+ */
+
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;

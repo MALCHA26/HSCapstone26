@@ -1,3 +1,9 @@
+/*
+ * 작성자: 손다혜
+ * 작성일: 2026.03.21
+ * 역할: (테스트용) 마우스와 시선 레이를 통해 물체를 집고 이동, 조작할 수 있는 스크립트
+ */
+
 using UnityEngine;
 
 public class Pickup : MonoBehaviour
