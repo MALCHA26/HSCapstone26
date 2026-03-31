@@ -514,7 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a879b3534358784b9b18eb130fb7d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::cshPlayerInfo
-  playerInfo: 0
+  playerInfo: 2
 --- !u!4 &1235187161
 Transform:
   m_ObjectHideFlags: 0
