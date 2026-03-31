@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 307018851}
   - component: {fileID: 307018852}
+  - component: {fileID: 307018853}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -167,6 +168,28 @@ MonoBehaviour:
   VRPlayerPrefab: {fileID: 786540720884573023, guid: 2abc09fb11f85874291c2f1d6d5b47a7, type: 3}
   SpawnPosPrefab: {fileID: 533795946}
   PlayerInfo: {fileID: 0}
+--- !u!114 &307018853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307018850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PhotonUnityNetworking::Photon.Pun.PhotonView
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 1
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &533795946
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,6 +346,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Client - OptiTrack
       objectReference: {fileID: 0}
+    - target: {fileID: 248440191355705369, guid: 9a32d482689653847b22155fb3096f79, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1275840138454952064, guid: 9a32d482689653847b22155fb3096f79, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.03488
@@ -365,7 +392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3798361029752001700, guid: 9a32d482689653847b22155fb3096f79, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3798361029752001700, guid: 9a32d482689653847b22155fb3096f79, type: 3}
       propertyPath: DrawMarkers
