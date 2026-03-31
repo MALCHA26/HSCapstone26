@@ -5,9 +5,11 @@
  */
 
 using UnityEngine;
+using Meta.XR.BuildingBlocks.AIBlocks;
 
 public class DoorOpener : MonoBehaviour
 {
+    public GameObject gazeCanvas;
     private bool isOpen = false;
     public float openAngle = 90f; // 문 각도
     public float smoothTime = 2f; // 열리는 속도
@@ -32,6 +34,21 @@ public class DoorOpener : MonoBehaviour
     // 레이캐스트 클릭 시 호출될 함수
     public void OpenDoor()
     {
+        //if (!isOpen)
+        //{
+        //    Invoke("StartSTT", 0.2f);
+        //}
         isOpen = !isOpen;
     }
+
+    // 자동으로 STT 실행하는 함수
+    //private void StartSTT()
+    //{
+    //    SpeechToTextAgent agent = FindFirstObjectByType<SpeechToTextAgent>();
+    //    if (agent != null)
+    //    {
+    //        agent.StartListening();
+    //        Debug.Log("마이크 활성화");
+    //    }
+    //}
 }
