@@ -18,7 +18,7 @@ public class cshGameManager : MonoBehaviourPun // 점수와 게임 오버 여부 및 게임 
             // 싱글톤 오브젝트를 반환
             return m_instance;
         }
-    }
+    }  
 
     private static cshGameManager m_instance; // 싱글톤이 할당될 static 변수
 
