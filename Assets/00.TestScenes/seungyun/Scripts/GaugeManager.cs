@@ -28,25 +28,25 @@ public class GaugeManager : MonoBehaviour
     }
 
     // STT -> 텍스트 -> LLM(OpenAI)
-    public void GetSTTText(string text)
-    {
-        Debug.Log("STT가 들은 말: " + text);
+    //public void GetSTTText(string text)
+    //{
+    //    Debug.Log("STT가 들은 말: " + text);
 
-        if (subtitleText != null)
-        {
-            subtitleText.text = $"{text}";
-        }
+    //    if (subtitleText != null)
+    //    {
+    //        subtitleText.text = $"{text}";
+    //    }
 
-        //OpenAIRequester requester = FindFirstObjectByType<OpenAIRequester>();
-        //if (requester != null)
-        //{
-        //    requester.AskAI(text);
-        //}
-        //else
-        //{
-        //    Debug.LogError("OpenAIRequester를 씬에서 찾을 수 없습니다!");
-        //}
-    }
+    //    OpenAIRequester requester = FindFirstObjectByType<OpenAIRequester>();
+    //    if (requester != null)
+    //    {
+    //        requester.AskAI(text);
+    //    }
+    //    else
+    //    {
+    //        Debug.LogError("OpenAIRequester를 씬에서 찾을 수 없습니다!");
+    //    }
+    //}
 
     // 점수 받아서 게이지 업데이트
     public void UpdateScore(float score)
