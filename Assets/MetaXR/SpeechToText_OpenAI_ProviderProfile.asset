@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks.AIBlocks::Meta.XR.BuildingBlocks.AIBlocks.OpenAIProvider
   supportedInferenceTypes: 1
   apiKey: 
-  overrideApiKey: 0
-  apiRoot: https://api.openai.com/v1/chat/completions
+  overrideApiKey: 1
+  apiRoot: https://api.openai.com/v1/
   model: whisper-1
   supportsVision: 1
   inlineRemoteImages: 0
