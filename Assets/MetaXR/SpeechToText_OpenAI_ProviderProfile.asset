@@ -15,10 +15,10 @@ MonoBehaviour:
   supportedInferenceTypes: 1
   apiKey: 
   overrideApiKey: 1
-  apiRoot: https://api.openai.com/v1/
+  apiRoot: https://api.openai.com/v1/audio/transcriptions
   model: whisper-1
   supportsVision: 1
-  inlineRemoteImages: 0
+  inlineRemoteImages: 1
   resolveRemoteRedirects: 1
   maxInlineBytes: 0
   sttResponseFormat: text
