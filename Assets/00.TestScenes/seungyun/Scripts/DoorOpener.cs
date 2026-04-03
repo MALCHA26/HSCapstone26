@@ -5,7 +5,6 @@
  */
 
 using UnityEngine;
-using Meta.XR.BuildingBlocks.AIBlocks;
 
 public class DoorOpener : MonoBehaviour
 {
@@ -30,25 +29,8 @@ public class DoorOpener : MonoBehaviour
         Quaternion target = isOpen ? openRotation : closedRotation;
         transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smoothTime);
     }
-
-    // 레이캐스트 클릭 시 호출될 함수
     public void OpenDoor()
     {
-        //if (!isOpen)
-        //{
-        //    Invoke("StartSTT", 0.2f);
-        //}
         isOpen = !isOpen;
     }
-
-    // 자동으로 STT 실행하는 함수
-    //private void StartSTT()
-    //{
-    //    SpeechToTextAgent agent = FindFirstObjectByType<SpeechToTextAgent>();
-    //    if (agent != null)
-    //    {
-    //        agent.StartListening();
-    //        Debug.Log("마이크 활성화");
-    //    }
-    //}
 }

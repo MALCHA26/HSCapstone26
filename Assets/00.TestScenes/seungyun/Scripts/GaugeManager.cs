@@ -1,7 +1,7 @@
 /*
  * 작성자: 김승윤
  * 작성일: 2026.04.01
- * 역할: LLM 제공 점수 가져와서 설득 게이지 조절 스크립트
+ * 역할: 점수 가져와서 설득 게이지 조절 스크립트
  */
 
 using UnityEngine;
@@ -27,36 +27,32 @@ public class GaugeManager : MonoBehaviour
         }
     }
 
-    // STT -> 텍스트 -> LLM(OpenAI)
-    //public void GetSTTText(string text)
-    //{
-    //    Debug.Log("STT가 들은 말: " + text);
+    // STT -> 텍스트 
+    public void GetSTTText(string text)
+    {
+        Debug.Log("STT가 들은 말: " + text);
 
-    //    if (subtitleText != null)
-    //    {
-    //        subtitleText.text = $"{text}";
-    //    }
+        if (subtitleText != null)
+        {
+            subtitleText.text = text;
+        }
 
-    //    OpenAIRequester requester = FindFirstObjectByType<OpenAIRequester>();
-    //    if (requester != null)
-    //    {
-    //        requester.AskAI(text);
-    //    }
-    //    else
-    //    {
-    //        Debug.LogError("OpenAIRequester를 씬에서 찾을 수 없습니다!");
-    //    }
-    //}
+        ScoreProvider provider = FindFirstObjectByType<ScoreProvider>();
+        if (provider != null)
+        {
+            provider.ProcessScore(text);
+        }
+    }
 
     // 점수 받아서 게이지 업데이트
     public void UpdateScore(float score)
     {
-        currentScore += score;
+        currentScore = score;
         if (currentScore >= maxScore)
         {
             currentScore = maxScore;
         }
         targetFill = currentScore / maxScore;
-        Debug.Log($"현재 누적 점수: {currentScore}점 / {maxScore}점 (목표: {targetFill * 100}%)");
+        Debug.Log($"현재 목표 게이지: {targetFill * 100}%");
     }
 }
