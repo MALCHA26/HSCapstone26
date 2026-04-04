@@ -13,6 +13,7 @@ public class GaugeManager : MonoBehaviour
     public Image gaugeImage;
     public float fillSpeed = 3f; // 채워지는 속도
     public TextMeshProUGUI subtitleText; // STT 자막
+    public GameObject voiceUI;
 
     private float targetFill = 0; // 적용 게이지
     private float currentScore = 0; // 현재 점수
@@ -27,11 +28,20 @@ public class GaugeManager : MonoBehaviour
         }
     }
 
+    // 마이크가 켜질 때 UI에 표시
+    public void VoiceUIActive(bool isActive)
+    {
+        if (voiceUI != null)
+        {
+            voiceUI.SetActive(isActive);
+        }
+    }
+
     // STT -> 텍스트 
     public void GetSTTText(string text)
     {
         Debug.Log("STT가 들은 말: " + text);
-
+        VoiceUIActive(false);
         if (subtitleText != null)
         {
             subtitleText.text = text;
