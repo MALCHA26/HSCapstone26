@@ -8,7 +8,8 @@ using UnityEngine;
 
 public class DoorOpener : MonoBehaviour
 {
-    public GameObject gazeCanvas;
+    public GameObject gaugeCanvas;
+    public GaugeManager gaugeManager;
     private bool isOpen = false;
     public float openAngle = 90f; // 문 각도
     public float smoothTime = 2f; // 열리는 속도
@@ -31,6 +32,20 @@ public class DoorOpener : MonoBehaviour
     }
     public void OpenDoor()
     {
-        isOpen = !isOpen;
+        if (!isOpen)
+        {
+            gaugeCanvas.SetActive(true);
+
+            if (gaugeManager != null)
+            {
+                gaugeManager.VoiceUIActive(false);
+            }
+            isOpen = true;
+        }
+        else // 문을 닫을 때
+        {
+            gaugeCanvas.SetActive(false); 
+            isOpen = false;
+        }
     }
 }

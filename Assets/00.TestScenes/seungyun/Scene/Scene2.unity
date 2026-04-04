@@ -674,7 +674,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1225695367}
   m_Father: {fileID: 2108640408}
   m_LocalEulerAnglesHint: {x: 1.605, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3324,6 +3325,7 @@ MonoBehaviour:
   gaugeImage: {fileID: 820084520}
   fillSpeed: 3
   subtitleText: {fileID: 2013139342}
+  voiceUI: {fileID: 362606096}
 --- !u!4 &886856253
 Transform:
   m_ObjectHideFlags: 0
@@ -3634,8 +3636,8 @@ Transform:
   m_GameObject: {fileID: 1081569201}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.77, y: 1, z: 0.77}
+  m_LocalPosition: {x: 0, y: 0, z: 1.37}
+  m_LocalScale: {x: 1, y: 1, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4147,7 +4149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dcb3b7ee8e615d4c8bccc608c531d56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorOpener
-  gazeCanvas: {fileID: 0}
+  gaugeCanvas: {fileID: 2108640407}
+  gaugeManager: {fileID: 886856252}
   openAngle: 90
   smoothTime: 2
 --- !u!1 &1225695366
@@ -4174,17 +4177,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1225695366}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalRotation: {x: -0.014004346, y: -0, z: -0, w: 0.999902}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.05, y: 0.049999997, z: 0.049999997}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2077461520}
-  m_Father: {fileID: 2108640408}
+  m_Father: {fileID: 362606097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 58.000008, y: 25.899994}
+  m_AnchoredPosition: {x: 33.89999, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1225695368
@@ -5495,6 +5498,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 886856252}
+        m_TargetAssemblyTypeName: GaugeManager, Assembly-CSharp
+        m_MethodName: VoiceUIActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1608173447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6691,7 +6706,6 @@ RectTransform:
   - {fileID: 820084519}
   - {fileID: 2013139341}
   - {fileID: 362606097}
-  - {fileID: 1225695367}
   - {fileID: 1608173445}
   - {fileID: 1876944212}
   - {fileID: 136544280}
