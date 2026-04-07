@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 910c277ad2d51c54ea576a325dd34646
+timeCreated: 1498676845
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 96582
+  packageName: Desk Table
+  packageVersion: 1.0
+  assetPath: Assets/Models/Desk Table/Desk Table Black.prefab
+  uploadId: 195179
