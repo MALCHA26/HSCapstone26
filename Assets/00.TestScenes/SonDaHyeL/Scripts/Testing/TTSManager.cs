@@ -3,26 +3,23 @@ using Meta.XR.BuildingBlocks.AIBlocks;
 
 public class TTSManager : MonoBehaviour
 {
-    public static TTSManager Instance;
-    public TextToSpeechAgent agent;
+    public static TTSManager Instance { get; private set; }
 
-    void Awake()
+    [SerializeField] private TextToSpeechAgent ttsAgent;
+
+    private void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        Instance = this;
     }
 
-    /// <summary>
-    /// 외부에서 대사만 넘기면 자동 재생됨
-    /// </summary>
     public void Speak(string text)
     {
-        if (agent == null)
+        if (ttsAgent == null)
         {
-            Debug.LogError("TTSManager: agent가 할당되지 않았습니다.");
+            Debug.LogError("[TTS] TextToSpeechAgent is not assigned.");
             return;
         }
 
-        agent.SpeakText(text);
+        ttsAgent.SpeakText(text);
     }
 }

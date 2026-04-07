@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
-    path: Assets/00.TestScenes/SonDaHyeL/Scene1.unity
+    path: Assets/00.TestScenes/SonDaHyeL/Scenes/Scene1.unity
     guid: 4a0aa6324d2a67c429e8f7157314a25c
   - enabled: 0
-    path: Assets/00.TestScenes/SonDaHyeL/Scene2.unity
+    path: Assets/00.TestScenes/SonDaHyeL/Scenes/Scene2.unity
     guid: ff1da1f289697e642aef48d499a5b16c
   - enabled: 0
     path: Assets/00.TestScenes/SonDaHyeL/VRGarb.unity
