@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks.AIBlocks::Meta.XR.BuildingBlocks.AIBlocks.OpenAIProvider
   supportedInferenceTypes: 1
   apiKey: 
-  overrideApiKey: 0
-  apiRoot: https://api.openai.com/v1/responses
+  overrideApiKey: 1
+  apiRoot: https://api.openai.com/v1/speech
   model: tts-1
   supportsVision: 1
   inlineRemoteImages: 0
   resolveRemoteRedirects: 1
   maxInlineBytes: 0
   sttResponseFormat: text
-  sttLanguage: 
+  sttLanguage: ko
   sttTemperature: 0
   ttsVoice: onyx
   ttsOutputFormat: mp3
