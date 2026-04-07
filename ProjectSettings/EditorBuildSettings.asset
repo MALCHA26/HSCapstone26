@@ -11,9 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00.TestScenes/SonDaHyeL/Scene1.unity
     guid: 4a0aa6324d2a67c429e8f7157314a25c
-  - enabled: 1
+  - enabled: 0
     path: Assets/00.TestScenes/SonDaHyeL/Scene2.unity
     guid: ff1da1f289697e642aef48d499a5b16c
+  - enabled: 1
+    path: Assets/00.TestScenes/seungyun/Scene/Scene2.unity
+    guid: ec68dcb972cfdc24baea7611f27626ab
+  - enabled: 1
+    path: Assets/00.TestScenes/seungyun/Scene/VRScene.unity
+    guid: 1d454938fbf943a4ab3c304e723250d3
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 44a2782258cd34444b6fd9589edbdc7b, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

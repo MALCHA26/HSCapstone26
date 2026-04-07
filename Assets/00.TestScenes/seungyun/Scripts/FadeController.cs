@@ -11,7 +11,7 @@ using UnityEngine.SceneManagement; // 씬 이동용
 public class FadeController : MonoBehaviour
 {
     private Image fadeImage; // 씬 전환 효과를 위한 검은색 이미지
-    public float fadeSpeed = 1.0f; // 페이드 전환 효과 속도
+    public float fadeSpeed = 0.5f; // 페이드 전환 효과 속도
 
     // 효과 시작 확인 변수 (true: 작동, false: 멈춤)
     private bool fadeIn = false;
@@ -39,7 +39,7 @@ public class FadeController : MonoBehaviour
         Color color = fadeImage.color;
 
         // 페이드 인 호출 시
-        if (fadeIn == true)
+        if (fadeIn)
         {
             color.a -= Time.deltaTime * fadeSpeed;
 
@@ -51,7 +51,7 @@ public class FadeController : MonoBehaviour
         }
 
         // 페이드 아웃 호출 시
-        if (fadeOut == true)
+        if (fadeOut)
         {
             color.a += Time.deltaTime * fadeSpeed;
 

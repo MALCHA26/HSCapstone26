@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class DoorOpener : MonoBehaviour
 {
+    public STTManager sttManager;
     public GameObject gaugeCanvas;
     public GaugeManager gaugeManager;
     private bool isOpen = false;
@@ -32,20 +33,32 @@ public class DoorOpener : MonoBehaviour
     }
     public void OpenDoor()
     {
-        if (!isOpen)
+        if (!isOpen) // 문을 열 때
         {
+            isOpen = true;
             gaugeCanvas.SetActive(true);
 
             if (gaugeManager != null)
             {
                 gaugeManager.VoiceUIActive(false);
             }
-            isOpen = true;
+
+            if (sttManager != null)
+            {
+                sttManager.StartSTT();
+            }
         }
-        else // 문을 닫을 때
+        else // 문 닫을 때
         {
-            gaugeCanvas.SetActive(false); 
             isOpen = false;
+            gaugeCanvas.SetActive(false);
+
+          
+            if (sttManager != null)
+            {
+                sttManager.StopSTT();
+            }
+            
         }
     }
 }
