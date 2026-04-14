@@ -7,6 +7,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class GaugeManager : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class GaugeManager : MonoBehaviour
     public float fillSpeed = 3f; // 채워지는 속도
     public TextMeshProUGUI subtitleText; // STT 자막
     public GameObject voiceUI;
-
+    public STTManager sttManager;
     private float targetFill = 0; // 적용 게이지
     private float currentScore = 0; // 현재 점수
     private const float maxScore = 100f; // 최대 점수
@@ -40,20 +41,32 @@ public class GaugeManager : MonoBehaviour
     // STT -> 텍스트 
     public void GetSTTText(string text)
     {
-        Debug.Log("STT가 들은 말: " + text);
+        Debug.Log("STT: " + text);
         VoiceUIActive(false);
         if (subtitleText != null)
         {
             subtitleText.text = text;
         }
-
+        
         ScoreProvider provider = FindFirstObjectByType<ScoreProvider>();
         if (provider != null)
         {
             provider.ProcessScore(text);
         }
+        StartCoroutine(RestartSTT());
     }
 
+    IEnumerator RestartSTT()
+    {
+        // 3초 동안 자막 제공
+        yield return new WaitForSeconds(3.0f);
+
+        // STT 다시 시작
+        if (sttManager != null)
+        {
+            sttManager.StartSTT();
+        }
+    }
     // 점수 받아서 게이지 업데이트
     public void UpdateScore(float score)
     {
@@ -63,6 +76,7 @@ public class GaugeManager : MonoBehaviour
             currentScore = maxScore;
         }
         targetFill = currentScore / maxScore;
-        Debug.Log($"현재 목표 게이지: {targetFill * 100}%");
+        Debug.Log($"현재 게이지: {targetFill * 100}%");
+      
     }
 }
