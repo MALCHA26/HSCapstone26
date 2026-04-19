@@ -40,6 +40,7 @@ public class DoorOpener : MonoBehaviour
 
             if (gaugeManager != null)
             {
+                gaugeManager.StartGauge();
                 gaugeManager.VoiceUIActive(false);
             }
 

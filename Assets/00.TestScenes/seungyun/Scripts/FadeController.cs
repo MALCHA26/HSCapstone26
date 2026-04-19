@@ -61,7 +61,7 @@ public class FadeController : MonoBehaviour
                 fadeOut = false;
 
                 // 다음 씬으로 이동
-                SceneManager.LoadScene(nextScene);
+                //SceneManager.LoadScene(nextScene);
             }
         }
         fadeImage.color = color;
