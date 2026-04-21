@@ -12,7 +12,7 @@ public class cshLobbyManager : MonoBehaviourPunCallbacks // PUN 구현할때 overrid
     public TextMeshProUGUI connectionInfoText;
     public Button joinButton;
     public GameObject PlayerInfo;
-
+    public string playSceneName = "MocapTestScene";
     private void Start()
     {
         // 접속에 필요한 정보(게임 버전) 설정
@@ -78,7 +78,7 @@ public class cshLobbyManager : MonoBehaviourPunCallbacks // PUN 구현할때 overrid
         // Unity 에서 제공하는 SceneMangaer.LoadScene() 은 이전 씬의 모든 게임 오브젝트를 삭제 및 네트워크 정보 유지가 되지 않음
         DontDestroyOnLoad(PlayerInfo);
 
-        PhotonNetwork.LoadLevel("MocapTestScene");
+        PhotonNetwork.LoadLevel(playSceneName);
         //base.OnJoinedRoom();
     }
 

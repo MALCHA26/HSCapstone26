@@ -151,6 +151,7 @@ MonoBehaviour:
   connectionInfoText: {fileID: 2142906245}
   joinButton: {fileID: 1728820522}
   PlayerInfo: {fileID: 1235187159}
+  playSceneName: Scene2
 --- !u!4 &479391186
 Transform:
   m_ObjectHideFlags: 0
