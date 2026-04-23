@@ -1136,7 +1136,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592208419}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 77afe37ff7b30df43831c134aad8b3e5, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: ce7a0dffb4761a04a8a5607008d5829b, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 2064764895}
@@ -1329,6 +1329,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4760252128398365805, guid: 0912746c659958a418eadc49e673ec0a, type: 3}
+      propertyPath: providerAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: f8c8d36cbb2e0494ea9dc1bf0bdf7c87, type: 2}
     - target: {fileID: 4760252128398365805, guid: 0912746c659958a418eadc49e673ec0a, type: 3}
       propertyPath: onSpeakFinished.m_PersistentCalls.m_Calls.Array.size
       value: 1
