@@ -72,11 +72,11 @@ public class GaugeManager : MonoBehaviour
         if (endingTTS != null)
         {
             endingTTS.PlayEndingNarration();
-            yield return new WaitForSeconds(25.0f); // 대사가 끝날 때까지 대기(초 설정)
+            yield return new WaitForSeconds(35.0f); // 대사가 끝날 때까지 대기(초 설정)
         }
 
         // 다음 씬 이동
-        SceneManager.LoadScene("Scene3");
+        SceneManager.LoadScene("Scene3-LightEffect");
     }
 
     // 마이크가 켜질 때 UI에 표시

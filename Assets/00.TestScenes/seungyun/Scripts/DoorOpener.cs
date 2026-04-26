@@ -27,7 +27,7 @@ public class DoorOpener : MonoBehaviour
     }
 
     void Update()
-    { 
+    {
         Quaternion target = isOpen ? openRotation : closedRotation;
         transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smoothTime);
     }
@@ -54,12 +54,12 @@ public class DoorOpener : MonoBehaviour
             isOpen = false;
             gaugeCanvas.SetActive(false);
 
-          
+
             if (sttManager != null)
             {
                 sttManager.StopSTT();
             }
-            
+
         }
     }
 }

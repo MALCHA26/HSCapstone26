@@ -7,17 +7,16 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FluorescentLamp_MTL
+  m_Name: door
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _EMISSION
   - _METALLICSPECGLOSSMAP
   - _NORMALMAP
-  - _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+  - _OCCLUSIONMAP
   m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -30,11 +29,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 841de91ffac99a446a481d4316e08b5a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7080d43e63343a649bd270921756cf8c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 0f0c2d1df18fb51469472249f2b9d1a5, type: 3}
+        m_Texture: {fileID: 2800000, guid: 878c8bc506640d94ba968d0fd3411f2b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -50,19 +49,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 841de91ffac99a446a481d4316e08b5a, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 841de91ffac99a446a481d4316e08b5a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7080d43e63343a649bd270921756cf8c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 3b7517de71fdc6e45a4a782ccf7c2889, type: 3}
+        m_Texture: {fileID: 2800000, guid: e822de897f92c49448573ff168fea745, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: ce972da91032a7c44a9c56095615f213, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
@@ -103,7 +102,7 @@ Material:
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0.5656854
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
@@ -112,7 +111,7 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0
-    - _SmoothnessTextureChannel: 1
+    - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
@@ -122,13 +121,13 @@ Material:
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 1, g: 0.94590205, b: 0.43081754, a: 0}
+    - _BaseColor: {r: 0.79999995, g: 0.79999995, b: 0.79999995, a: 1}
+    - _Color: {r: 0.79999995, g: 0.79999995, b: 0.79999995, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &149668568906330296
+--- !u!114 &4272059399456923100
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
