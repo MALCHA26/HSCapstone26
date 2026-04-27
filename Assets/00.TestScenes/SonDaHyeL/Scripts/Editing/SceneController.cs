@@ -20,6 +20,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] private TextureChange textureChange;
     [SerializeField] private MapEffect mapEffect;
     [SerializeField] private ObjectSpawn printerSpawner;
+    [SerializeField] private SoundManager soundManager;
 
     private void Start()
     {
@@ -46,6 +47,7 @@ public class SceneController : MonoBehaviour
         bool dropDone = false;
         paperDrop.onComplete = () => dropDone = true;
         paperDrop.Drop();
+        soundManager.Play("PaperFall");
 
         yield return new WaitUntil(() => dropDone);
 
