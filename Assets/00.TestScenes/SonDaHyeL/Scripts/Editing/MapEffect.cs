@@ -1,3 +1,9 @@
+/*
+ * 작성자: 손다혜
+ * 작성일: 2026.04.18
+ * 역할: Scene1 지도 연출 제어 
+ */
+
 using UnityEngine;
 using System.Collections;
 
@@ -5,45 +11,53 @@ public class MapEffect : MonoBehaviour
 {
     [SerializeField] private ObjectSpawn mapSpawner;
 
-    public IEnumerator Play(string narration = null)
+    private GameObject mapObj;
+    private MaterialFade mapMaterialFade;
+
+    // 프리팹 생성, 알파값 조정
+    public IEnumerator Begin()
     {
-        // 1. Map 프리팹 스폰
-        GameObject mapObj = mapSpawner.Spawn();
+        mapObj = mapSpawner.Spawn();
         if (mapObj == null) yield break;
 
-        // Y축 180도 회전
         mapObj.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
 
         Transform mapWallTransform = mapObj.transform.Find("MapWall");
         AlphaChange mapWallAlpha = mapWallTransform?.GetComponent<AlphaChange>();
-        MaterialFade mapMaterialFade = mapObj.GetComponentInChildren<MaterialFade>();
+        mapMaterialFade = mapObj.GetComponentInChildren<MaterialFade>();
 
-        // 2. MapWall AlphaChange
         if (mapWallAlpha != null)
         {
             mapWallAlpha.Play();
             yield return new WaitForSeconds(mapWallAlpha.Duration);
         }
+    }
 
-        // 3. 나레이션 + MaterialFade 동시 시작, 둘 다 종료 대기
+    // 머테리얼 단계 전환
+    public IEnumerator PlayStep(string narration)
+    {
         bool fadeDone = false;
-        bool narrationDone = narration == null; // 나레이션 없으면 바로 완료 처리
-
         if (mapMaterialFade != null)
         {
             mapMaterialFade.onComplete = () => fadeDone = true;
-            StartCoroutine(mapMaterialFade.PlayAndWait());
+            StartCoroutine(mapMaterialFade.FadeNext());
         }
-        else
-        {
-            fadeDone = true;
-        }
+        else fadeDone = true;
 
-        if (narration != null)
-            TTSManager.Instance.Speak(narration, () => narrationDone = true);
+        yield return Narrate(narration);
+        yield return new WaitUntil(() => fadeDone);
+    }
 
-        yield return new WaitUntil(() => fadeDone && narrationDone);
+    public void End()
+    {
+        if (mapObj != null)
+            Destroy(mapObj);
+    }
 
-        Destroy(mapObj);
+    private IEnumerator Narrate(string text)
+    {
+        bool done = false;
+        TTSManager.Instance.Speak(text, () => done = true);
+        yield return new WaitUntil(() => done);
     }
 }

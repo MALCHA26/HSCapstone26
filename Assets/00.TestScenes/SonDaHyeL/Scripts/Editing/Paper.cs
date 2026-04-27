@@ -41,11 +41,10 @@ public class Paper : MonoBehaviour, IGrabbable
         {
             isTriggered = true;
 
-            // Into 프리팹을 현재 위치/회전에 스폰
             if (intoPrefab != null)
                 Instantiate(intoPrefab, intoSpawnPoint.position, intoSpawnPoint.rotation);
 
-            // 충돌 신호 전달
+            // SceneController로 충돌 신호 전달 > 다음 씬 로드 호출
             sceneController?.LoadNextScene();
 
             Destroy(gameObject);

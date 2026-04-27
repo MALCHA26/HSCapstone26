@@ -1,7 +1,8 @@
 /*
- * 역할: (테스트용) AlphaChange → Spread 애니메이션 → MaterialFade 순서 실행
+ * 작성자: 손다혜
+ * 작성일: 2026.04.21
+ * 역할: 전환 연출 순서 제어
  */
-
 using UnityEngine;
 using System.Collections;
 

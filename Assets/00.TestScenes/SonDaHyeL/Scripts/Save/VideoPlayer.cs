@@ -1,7 +1,7 @@
 /*
  * 작성자: 손다혜
  * 작성일: 2026.04.11
- * 역할: Scene1 영상 재생
+ * 역할: Scene 영상 재생
  */
 
 using UnityEngine;

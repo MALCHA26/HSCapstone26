@@ -1,6 +1,7 @@
 /*
- * 역할: 머테리얼 배열을 순서대로 덮어씌우는 전환 효과
- *       Play() 호출 시 순서대로 1→2→3... 페이드 전환
+ * 작성자: 손다혜
+ * 작성일: 2026.04.19
+ * 역할: 머테리얼 전환 효과 구현
  */
 
 using UnityEngine;
@@ -15,6 +16,7 @@ public class MaterialFade : MonoBehaviour
     public Action onComplete;
 
     private Renderer m_renderer;
+    private int currentIndex = 0;
 
     private void Awake()
     {
@@ -31,19 +33,31 @@ public class MaterialFade : MonoBehaviour
         yield return StartCoroutine(FadeSequence());
     }
 
+    // 다음 머테리얼로 한 단계 전환
+    public IEnumerator FadeNext()
+    {
+        if (currentIndex >= materials.Length)
+        {
+            Debug.LogWarning("[MaterialFade] 더 이상 전환할 머테리얼이 없습니다.");
+            yield break;
+        }
+        yield return StartCoroutine(FadeTo(materials[currentIndex]));
+        currentIndex++;
+        onComplete?.Invoke();
+    }
+
     private IEnumerator FadeSequence()
     {
         for (int i = 0; i < materials.Length; i++)
         {
             yield return StartCoroutine(FadeTo(materials[i]));
         }
-
         onComplete?.Invoke();
     }
 
     private IEnumerator FadeTo(Material next)
     {
-        // 새 머테리얼 인스턴스, 알파 0으로 시작
+        // 새 머테리얼, 알파 0으로 시작
         Material fadeMat = new Material(next);
         Color c = fadeMat.color;
         c.a = 0f;
@@ -56,7 +70,7 @@ public class MaterialFade : MonoBehaviour
         combined[combined.Length - 1] = fadeMat;
         m_renderer.materials = combined;
 
-        // 알파 0 → 1
+        // 알파 0 > 1
         float t = 0f;
         while (t < duration)
         {

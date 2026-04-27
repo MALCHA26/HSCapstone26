@@ -28,7 +28,7 @@ public class SoundManager : MonoBehaviour
         audioSource = gameObject.AddComponent<AudioSource>();
     }
 
-    public void Play(string soundName)
+    public void Play(string soundName, float volume)
     {
         SoundClip found = Array.Find(sounds, s => s.name == soundName);
         if (found == null)
@@ -37,6 +37,6 @@ public class SoundManager : MonoBehaviour
             return;
         }
 
-        audioSource.PlayOneShot(found.clip);
+        audioSource.PlayOneShot(found.clip,volume);
     }
 }

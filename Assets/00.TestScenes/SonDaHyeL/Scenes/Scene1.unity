@@ -1085,6 +1085,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7926504068899692781, guid: 55177fec8f1cb44439d62d37ff2a4fe7, type: 3}
+      propertyPath: sounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926504068899692781, guid: 55177fec8f1cb44439d62d37ff2a4fe7, type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c8543d5c487f81a4d9c5b7a7b5aef20d, type: 3}
+    - target: {fileID: 7926504068899692781, guid: 55177fec8f1cb44439d62d37ff2a4fe7, type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: PageFlip
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926504068899692781, guid: 55177fec8f1cb44439d62d37ff2a4fe7, type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e4ec81bace07c7343b295e4dbdab8f4e, type: 3}
+    - target: {fileID: 7926504068899692781, guid: 55177fec8f1cb44439d62d37ff2a4fe7, type: 3}
+      propertyPath: sounds.Array.data[2].name
+      value: Typing
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926504068899692781, guid: 55177fec8f1cb44439d62d37ff2a4fe7, type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 71ea9d56c3bce8e49b318828cfd2792d, type: 3}
+    - target: {fileID: 7926504068899692781, guid: 55177fec8f1cb44439d62d37ff2a4fe7, type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: Printer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1252,7 +1280,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592208419}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: ce7a0dffb4761a04a8a5607008d5829b, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 488e55585f6a0894b8e3b79d4bccca79, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 2064764895}
@@ -1269,7 +1297,7 @@ VideoPlayer:
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
-  - 1
+  - 0.3
   m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
