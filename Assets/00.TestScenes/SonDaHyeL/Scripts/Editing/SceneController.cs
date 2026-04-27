@@ -97,6 +97,11 @@ public class SceneController : MonoBehaviour
     // 다음 씬 호출
     public void LoadNextScene()
     {
+        Invoke(nameof(LoadScene), 3f);
+    }
+
+    private void LoadScene()
+    {
         UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneName);
     }
 }

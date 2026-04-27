@@ -229,6 +229,7 @@ Transform:
   m_Children:
   - {fileID: 1940133044}
   - {fileID: 2076878654}
+  - {fileID: 1185495730}
   m_Father: {fileID: 1257834408}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &381295365 stripped
@@ -254,6 +255,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paper
       objectReference: {fileID: 0}
+    - target: {fileID: 7978691741831185359, guid: 8f65a91bc18df8642ad4d01039477d2f, type: 3}
+      propertyPath: intoPrefab
+      value: 
+      objectReference: {fileID: 2839769773220188738, guid: 68f667371fdd023479f87eb4fcd606a9, type: 3}
+    - target: {fileID: 7978691741831185359, guid: 8f65a91bc18df8642ad4d01039477d2f, type: 3}
+      propertyPath: intoSpawnPoint
+      value: 
+      objectReference: {fileID: 1185495730}
     - target: {fileID: 7978691741831185359, guid: 8f65a91bc18df8642ad4d01039477d2f, type: 3}
       propertyPath: sceneController
       value: 
@@ -1086,6 +1095,48 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 146023125905371531, guid: 55177fec8f1cb44439d62d37ff2a4fe7, type: 3}
   m_PrefabInstance: {fileID: 1100966459}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1100966461 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7926504068899692781, guid: 55177fec8f1cb44439d62d37ff2a4fe7, type: 3}
+  m_PrefabInstance: {fileID: 1100966459}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba16865846c54447aa23fef52da85fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundManager
+--- !u!1 &1185495729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1185495730}
+  m_Layer: 0
+  m_Name: IntoSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1185495730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185495729}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.57296675, y: 0.41437796, z: -0.41437796, w: -0.57296675}
+  m_LocalPosition: {x: 0.36245775, y: 1.769, z: 9.591579}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 197925653}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1257834407
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,6 +1193,7 @@ MonoBehaviour:
   textureChange: {fileID: 381295365}
   mapEffect: {fileID: 1940133046}
   printerSpawner: {fileID: 2076878655}
+  soundManager: {fileID: 1100966461}
 --- !u!1 &1592208419
 GameObject:
   m_ObjectHideFlags: 0
