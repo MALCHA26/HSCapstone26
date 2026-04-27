@@ -44,7 +44,7 @@ public class ScoreProvider : MonoBehaviour
 
         if (promptText != null)
         {
-            promptText.text = $"[다음 문장을 읽으세요]\n{currentTarget}";
+            promptText.text = $"[다음 문장을 읽으세요]\n\n{currentTarget}";
         }
     }
 
@@ -82,7 +82,7 @@ public class ScoreProvider : MonoBehaviour
         if (promptText != null)
         {
             string colorTag = isMatch ? "green" : "red";
-            promptText.text = $"[다음 문장을 읽으세요]\n<color={colorTag}>{currentTarget}</color>";
+            promptText.text = $"[다음 문장을 읽으세요]\n\n<color={colorTag}>{currentTarget}</color>";
         }
 
         // 1.5초 동안 표시

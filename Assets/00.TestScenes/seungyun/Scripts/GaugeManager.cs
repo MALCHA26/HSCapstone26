@@ -63,7 +63,6 @@ public class GaugeManager : MonoBehaviour
         if (screenFade2 != null)
         {
             screenFade2.FadeOut(); 
-            yield return new WaitForSeconds(1.0f); // 설정 시간만큼 대기
         }
         printerSound.Stop();
 
@@ -72,7 +71,7 @@ public class GaugeManager : MonoBehaviour
         if (endingTTS != null)
         {
             endingTTS.PlayEndingNarration();
-            yield return new WaitForSeconds(35.0f); // 대사가 끝날 때까지 대기(초 설정)
+            yield return new WaitForSeconds(30.0f); // 대사가 끝날 때까지 대기(초 설정)
         }
 
         // 다음 씬 이동

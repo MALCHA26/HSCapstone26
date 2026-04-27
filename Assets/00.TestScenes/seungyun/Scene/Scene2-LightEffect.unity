@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
+  m_AmbientSkyColor: {r: 0.19496846, g: 0.19496846, b: 0.19496846, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -4307,6 +4307,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1794343311}
+        m_TargetAssemblyTypeName: STTManager, Assembly-CSharp
+        m_MethodName: StartSTT
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _whenUnselect:
     m_PersistentCalls:
       m_Calls: []
@@ -5703,7 +5715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreProvider
   promptText: {fileID: 1838099198}
-  scoreAmount: 10
+  scoreAmount: 15
   sentences:
   - "\uB2F9\uC2E0\uB3C4 \uC6B0\uB9AC\uB098\uB77C \uBC31\uC131\uC774 \uC544\uB2C8\uC624."
   - "\uB3C5\uB9BD\uC744 \uC6D0\uD558\uB294 \uB9C8\uC74C\uC740 \uB2F9\uC2E0\uB3C4
@@ -6893,6 +6905,7 @@ GameObject:
   - component: {fileID: 1138529881}
   - component: {fileID: 1138529880}
   - component: {fileID: 1138529882}
+  - component: {fileID: 1138529883}
   m_Layer: 0
   m_Name: StartingManager
   m_TagString: Untagged
@@ -7025,6 +7038,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSpeak
   agent2: {fileID: 46829024}
+--- !u!114 &1138529883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138529879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e62aa5480aa49814eabc5afae5693bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FadeInManager
 --- !u!1 &1173844247
 GameObject:
   m_ObjectHideFlags: 0
@@ -13279,7 +13304,7 @@ Transform:
   m_GameObject: {fileID: 1677832174556408281}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 3.43, z: 1.11}
+  m_LocalPosition: {x: -1.74, y: 3.696, z: 1.72}
   m_LocalScale: {x: 80, y: 80, z: 80}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16083,13 +16108,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9038153749080060691}
   serializedVersion: 2
-  m_LocalRotation: {x: 1, y: -0, z: -0, w: -0.00000008940697}
-  m_LocalPosition: {x: -0.00035999983, y: -0.00263, z: 0.02241}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
+  m_LocalPosition: {x: -0.00036, y: -0.00013, z: -0.00806}
   m_LocalScale: {x: 0.0069999998, y: 0.008000002, z: 0.008000002}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2018470070662443875}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!4 &5037796124228927697
 Transform:
   m_ObjectHideFlags: 0
@@ -18242,6 +18267,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 790493834105500378, guid: 5b82dbb4e12c46446a4d01f1b2f794f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2502465130241254112, guid: 5b82dbb4e12c46446a4d01f1b2f794f2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -18257,6 +18286,34 @@ PrefabInstance:
     - target: {fileID: 4807095771005490026, guid: 5b82dbb4e12c46446a4d01f1b2f794f2, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952777189099681496, guid: 5b82dbb4e12c46446a4d01f1b2f794f2, type: 3}
+      propertyPath: fadeOnStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419103088960808475, guid: 5b82dbb4e12c46446a4d01f1b2f794f2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419103088960808475, guid: 5b82dbb4e12c46446a4d01f1b2f794f2, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419103088960808475, guid: 5b82dbb4e12c46446a4d01f1b2f794f2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419103088960808475, guid: 5b82dbb4e12c46446a4d01f1b2f794f2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419103088960808475, guid: 5b82dbb4e12c46446a4d01f1b2f794f2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419103088960808475, guid: 5b82dbb4e12c46446a4d01f1b2f794f2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19538,8 +19595,8 @@ Transform:
   m_GameObject: {fileID: 115070297327277636}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.3401, y: 3.46, z: 0.9817}
-  m_LocalScale: {x: 0.6415016, y: 1, z: 0.5368411}
+  m_LocalPosition: {x: 0.3525, y: 3.46, z: 0.9981}
+  m_LocalScale: {x: 0.64889765, y: 1, z: 0.54011583}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9144173556674389712}
@@ -20431,7 +20488,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 12
   m_Type: 0
-  m_Color: {r: 1, g: 0.8964978, b: 0.51257855, a: 1}
+  m_Color: {r: 1, g: 0.9373605, b: 0.7012578, a: 1}
   m_Intensity: 20
   m_Range: 6.5
   m_SpotAngle: 39.835167
@@ -20498,9 +20555,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876497049a00d2044b06f4004bec542e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LightController
-  minIntensity: 5
+  minIntensity: 2
   maxIntensity: 20
-  blinkingSpeed: 0.1
+  blinkingSpeed: 0.4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
