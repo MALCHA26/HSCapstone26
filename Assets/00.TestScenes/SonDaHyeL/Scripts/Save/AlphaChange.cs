@@ -1,7 +1,8 @@
 /*
- * 역할: Play() 호출 시 알파값을 alphaMin → alphaMax로 한 번 전환
+ * 작성자: 손다혜
+ * 작성일: 2026.04.18
+ * 역할: 지정한 알파값 사이 변환
  */
-
 using UnityEngine;
 using System.Collections;
 
