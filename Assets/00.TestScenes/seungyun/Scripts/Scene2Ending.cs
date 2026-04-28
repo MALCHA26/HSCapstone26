@@ -36,17 +36,8 @@ public class Scene2Ending : MonoBehaviour
 
         // 자막 텍스트 추가 가능
         /*
-        subtitle.text = "결국... 발각되고 말았군...";
+        subtitle.text = "자막 내용";
         yield return new WaitForSeconds(3.0f);
-
-        subtitle.text = "독립선언서가 세상에 나가지 못하다니...";
-        yield return new WaitForSeconds(3.0f);
-
-        subtitle.text = "아아, 이 일을 어찌할꼬...";
-        yield return new WaitForSeconds(3.0f);
-
-        subtitle.text = ""; // 자막 지우기
-        yield return new WaitForSeconds(1.0f);
         */
 
         // 다음 씬 이동

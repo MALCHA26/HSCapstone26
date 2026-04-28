@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
@@ -14,12 +14,30 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/00.TestScenes/SonDaHyeL/Scene2.unity
     guid: ff1da1f289697e642aef48d499a5b16c
-  - enabled: 1
+  - enabled: 0
     path: Assets/00.TestScenes/SonDaHyeL/Scenes/Scene1.unity
     guid: 6db4b9e8f2982694d9661cd27ab728ca
-  - enabled: 1
+  - enabled: 0
     path: Assets/00.TestScenes/SonDaHyeL/Scenes/Scene2.unity
     guid: fb30076784afc424799180f1f1166d9e
+  - enabled: 0
+    path: Assets/00.TestScenes/seungyun/Scene/Scene2.unity
+    guid: ec68dcb972cfdc24baea7611f27626ab
+  - enabled: 0
+    path: Assets/00.TestScenes/seungyun/Scene/Scene3.unity
+    guid: 04990507b4971cf47ae9ecf4c78c2ca2
+  - enabled: 1
+    path: Assets/00.TestScenes/joyeeon/Scenes/Scene2.unity
+    guid: 3ed5953479d59064b95b25fc2a5b3d46
+  - enabled: 1
+    path: Assets/00.TestScenes/joyeeon/Scenes/Lobby.unity
+    guid: 2a38815b045120c4db1293d5781d8803
+  - enabled: 1
+    path: Assets/00.TestScenes/seungyun/Scene/Scene2-LightEffect.unity
+    guid: 7fecb1673d247734e82bbbe30edae1c1
+  - enabled: 1
+    path: Assets/00.TestScenes/seungyun/Scene/Scene3-LightEffect.unity
+    guid: fbdd8f3ad60b14549bbba2fa5fe642ab
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 44a2782258cd34444b6fd9589edbdc7b, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

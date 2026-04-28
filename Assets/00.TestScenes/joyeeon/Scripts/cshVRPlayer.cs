@@ -3,11 +3,23 @@ using Photon.Pun;
 
 public class cshVRPlayer : MonoBehaviourPun
 {
+    private void Awake()
+    {
+        GameObject VRInstance = GameObject.Find("VRInstanceData");
+        VRInstance.SetActive(true);
+
+        for(int i = 0; i<VRInstance.transform.childCount; i++)
+        {
+            VRInstance.transform.GetChild(i).gameObject.SetActive(true);
+        }
+      
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         if (!photonView.IsMine)
         {
+
            // GameObject[] Camera = GameObject.FindGameObjectsWithTag("Camera");
            //foreach(GameObject cam in Camera)
            // {

@@ -2620,6 +2620,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 755f85fe704e473498d307281e385baf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::cshMocapPlayer
+  MRUKInstance:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &5396926971471131320
 MonoBehaviour:
   m_ObjectHideFlags: 0

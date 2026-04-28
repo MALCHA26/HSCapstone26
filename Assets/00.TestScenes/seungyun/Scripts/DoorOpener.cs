@@ -8,6 +8,10 @@ using UnityEngine;
 
 public class DoorOpener : MonoBehaviour
 {
+    public Transform handleTransform;
+    public float triggerAngle = 60f;   // 문 열리는 손잡이 회전 각도
+    public GameObject guideCanvas;
+    public AudioSource knockAudio;
     public STTManager sttManager;
     public GameObject gaugeCanvas;
     public GaugeManager gaugeManager;
@@ -27,19 +31,36 @@ public class DoorOpener : MonoBehaviour
     }
 
     void Update()
-    { 
+    {
+        if (!isOpen && handleTransform != null)
+        {
+            CheckHandleRotation();
+        }
         Quaternion target = isOpen ? openRotation : closedRotation;
         transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smoothTime);
+    }
+    void CheckHandleRotation()
+    {
+        float currentHandleAngle = handleTransform.localEulerAngles.z;
+
+        if (currentHandleAngle > 180) currentHandleAngle -= 360;
+        if (Mathf.Abs(currentHandleAngle) >= triggerAngle)
+        {
+            guideCanvas.SetActive(false);
+            OpenDoor();
+        }
     }
     public void OpenDoor()
     {
         if (!isOpen) // 문을 열 때
         {
             isOpen = true;
+            knockAudio.Stop();
             gaugeCanvas.SetActive(true);
 
             if (gaugeManager != null)
             {
+                gaugeManager.StartGauge();
                 gaugeManager.VoiceUIActive(false);
             }
 
@@ -47,18 +68,6 @@ public class DoorOpener : MonoBehaviour
             {
                 sttManager.StartSTT();
             }
-        }
-        else // 문 닫을 때
-        {
-            isOpen = false;
-            gaugeCanvas.SetActive(false);
-
-          
-            if (sttManager != null)
-            {
-                sttManager.StopSTT();
-            }
-            
         }
     }
 }
