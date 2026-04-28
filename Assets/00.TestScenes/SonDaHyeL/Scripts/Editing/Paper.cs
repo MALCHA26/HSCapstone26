@@ -9,8 +9,8 @@ using System;
 
 public class Paper : MonoBehaviour, IGrabbable
 {
-    [SerializeField] private SceneController sceneController;
-    [SerializeField] private GameObject intoPrefab; 
+    [SerializeField] private AllSceneController sceneController;
+    [SerializeField] private GameObject intoPrefab;
     [SerializeField] private Transform intoSpawnPoint;
 
     public Action onGrabbed;
@@ -20,7 +20,7 @@ public class Paper : MonoBehaviour, IGrabbable
     private void Start()
     {
         if (sceneController == null)
-            sceneController = FindObjectOfType<SceneController>();
+            sceneController = FindObjectOfType<AllSceneController>();
     }
 
     // IGrabbable

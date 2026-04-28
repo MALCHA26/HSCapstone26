@@ -1216,12 +1216,12 @@ MonoBehaviour:
   sceneFade: {fileID: 918200250}
   nextSceneName: Scene2
   videoPlayer: {fileID: 1592208421}
+  soundManager: {fileID: 1100966461}
   paperDrop: {fileID: 489283015}
-  paper: {fileID: 489283014}
   textureChange: {fileID: 381295365}
   mapEffect: {fileID: 1940133046}
   printerSpawner: {fileID: 2076878655}
-  soundManager: {fileID: 1100966461}
+  paper: {fileID: 489283014}
 --- !u!1 &1592208419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1476,7 +1476,7 @@ PrefabInstance:
     - target: {fileID: 4760252128398365805, guid: 0912746c659958a418eadc49e673ec0a, type: 3}
       propertyPath: providerAsset
       value: 
-      objectReference: {fileID: 11400000, guid: f8c8d36cbb2e0494ea9dc1bf0bdf7c87, type: 2}
+      objectReference: {fileID: 11400000, guid: fa9b63d5783b1344893610d52a129964, type: 2}
     - target: {fileID: 4760252128398365805, guid: 0912746c659958a418eadc49e673ec0a, type: 3}
       propertyPath: onSpeakFinished.m_PersistentCalls.m_Calls.Array.size
       value: 1
