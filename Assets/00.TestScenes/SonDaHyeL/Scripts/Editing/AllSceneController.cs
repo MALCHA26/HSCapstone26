@@ -45,17 +45,22 @@ public abstract class AllSceneController : MonoBehaviour
     // 영상 종료 후 페이드 아웃 → 인
     protected IEnumerator VideoFadeTransition()
     {
+        float duration = OVRScreenFade.instance != null ? OVRScreenFade.instance.fadeTime : 1f;
+
         sceneFade.FadeOut();
-        yield return new WaitForSeconds(sceneFade.FadeDuration);
+        yield return new WaitForSeconds(duration);
         Destroy(videoPlayer.gameObject);
         sceneFade.FadeIn();
+        yield return new WaitForSeconds(duration);
     }
 
     // 다음 씬 호출
     public virtual void LoadNextScene()
     {
+        float duration = OVRScreenFade.instance != null ? OVRScreenFade.instance.fadeTime : 1f;
+
         sceneFade.FadeOut();
-        Invoke(nameof(LoadScene), 3f);
+        Invoke(nameof(LoadScene), duration + 3f);
     }
 
     private void LoadScene()

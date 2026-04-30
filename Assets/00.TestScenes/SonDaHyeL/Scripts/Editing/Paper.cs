@@ -28,6 +28,13 @@ public class Paper : MonoBehaviour, IGrabbable
     {
         if (grabTriggered) return;
         grabTriggered = true;
+
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null) rb.useGravity = true;
+
+        Animator anim = GetComponent<Animator>();
+        if (anim != null) anim.enabled = false;
+
         onGrabbed?.Invoke();
     }
 
