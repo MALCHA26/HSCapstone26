@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8302768378257353816}
   - component: {fileID: 3880954617136035507}
   m_Layer: 0
-  m_Name: AnimatePaper
+  m_Name: AnimatePaper1
   m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
