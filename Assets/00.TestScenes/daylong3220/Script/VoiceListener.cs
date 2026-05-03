@@ -32,6 +32,13 @@ public class VoiceListener : MonoBehaviour
         }
     }
 
+    public void more()
+    {
+        Player_text = "대기중";
+        dictationService.Activate();
+        Debug.Log("다시 말씀해주세요.");
+    }
+
     public void OnFullTranscription(string text)
     {
         // 3. 인식 결과 출력
