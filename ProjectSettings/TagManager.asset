@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 3
   tags:
   - Grabbable
+  - GaugeCanvas
+  - GaugeImg
+  - VoiceUI
+  - Bullet
+  - script
   layers:
   - Default
   - TransparentFX

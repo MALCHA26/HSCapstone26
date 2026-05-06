@@ -26,6 +26,10 @@ public class GaugeManager : MonoBehaviour
 
     void Start()
     {
+        GameObject Gauge = GameObject.FindWithTag("GaugeImg");
+        gaugeImage = Gauge.GetComponent<Image>();
+        voiceUI = GameObject.FindWithTag("VoiceUI");
+        canvas = GameObject.FindWithTag("GaugeCanvas");
         currentScore = maxScore;
         if (gaugeImage != null)
         {

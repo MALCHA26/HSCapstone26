@@ -33,6 +33,8 @@ public class ScoreProvider : MonoBehaviour
     private bool checkingSTT = false;
     void Start()
     {
+        GameObject text = GameObject.FindWithTag("script");
+        promptText = text.GetComponent<TextMeshProUGUI>();
         SetNewPrompt();
     }
 
