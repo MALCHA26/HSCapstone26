@@ -25,7 +25,7 @@ public class cshLobbyManager : MonoBehaviourPunCallbacks // PUN 구현할때 overrid
         // 접속 시도 중임을 텍스트로 표시
         connectionInfoText.text = "Connecting to Master Server...";
 
-        PlayerInfo.GetComponent<cshPlayerInfo>().playerInfo = 1;
+        PlayerInfo.GetComponent<cshPlayerInfo>().playerInfo = 2;
     }
 
     public override void OnConnectedToMaster()
@@ -52,6 +52,7 @@ public class cshLobbyManager : MonoBehaviourPunCallbacks // PUN 구현할때 overrid
         if (PhotonNetwork.IsConnected)
         {
             connectionInfoText.text = "Connecting to Room...";
+            Debug.Log("Connecting to Room...");
             PhotonNetwork.JoinRandomRoom();
         }
         else

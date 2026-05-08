@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00.TestScenes/seungyun/Scene/Scene3-LightEffect.unity
     guid: fbdd8f3ad60b14549bbba2fa5fe642ab
+  - enabled: 1
+    path: Assets/00.TestScenes/joyeeon/Scenes/Scene1.unity
+    guid: 5cefcffd82b03ed4f952711db31dba66
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 44a2782258cd34444b6fd9589edbdc7b, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
