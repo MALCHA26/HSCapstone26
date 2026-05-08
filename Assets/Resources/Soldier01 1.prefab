@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e282cd5ab9e9e934fbb4659ae24a36b5, type: 2}
     - target: {fileID: 919132149155446097, guid: de8f7909ccca5344c8a98e255ccb4a67, type: 3}
       propertyPath: m_Name
-      value: Soldier01
+      value: Soldier01 1
       objectReference: {fileID: 0}
     - target: {fileID: 3264522524272297956, guid: de8f7909ccca5344c8a98e255ccb4a67, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -119,5 +119,71 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de8f7909ccca5344c8a98e255ccb4a67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3176379178415770267}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de8f7909ccca5344c8a98e255ccb4a67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2121361864858210860}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de8f7909ccca5344c8a98e255ccb4a67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2574334749206752581}
   m_SourcePrefab: {fileID: 100100000, guid: de8f7909ccca5344c8a98e255ccb4a67, type: 3}
+--- !u!1 &1860861623720864093 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: de8f7909ccca5344c8a98e255ccb4a67, type: 3}
+  m_PrefabInstance: {fileID: 1518401473896305676}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-3176379178415770267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860861623720864093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6226842a13d56fc4b9f6ffc41f7ef0ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OptitrackSkeletonAnimator
+  StreamingClient: {fileID: 0}
+  SkeletonAssetName: Skeleton 001
+  DestinationAvatar: {fileID: 9000000, guid: de8f7909ccca5344c8a98e255ccb4a67, type: 3}
+--- !u!114 &2121361864858210860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860861623720864093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 755f85fe704e473498d307281e385baf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::cshMocapPlayer
+  MRUKInstance:
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &-2574334749206752581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860861623720864093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PhotonUnityNetworking::Photon.Pun.PhotonView
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0

@@ -18,6 +18,7 @@ public class GaugeManager : MonoBehaviour
     private OVRScreenFade screenFade2;
     public GameObject canvas;
     public AudioSource printerSound;
+    public AudioSource EndingAudio;
     public float decreaseGauge = 2f; // 1초에 깎이는 수치 
     private float currentScore = 100; // 현재 점수
     private const float maxScore = 100f; // 최대 점수
@@ -71,11 +72,11 @@ public class GaugeManager : MonoBehaviour
         printerSound.Stop();
 
         // 나레이션 재생
-        Scene2EndingTTS endingTTS = FindFirstObjectByType<Scene2EndingTTS>();
-        if (endingTTS != null)
+        EndingAudio.Play();
+        if (EndingAudio != null)
         {
-            endingTTS.PlayEndingNarration();
-            yield return new WaitForSeconds(30.0f); // 대사가 끝날 때까지 대기(초 설정)
+            EndingAudio.Play();
+            yield return new WaitForSeconds(60.0f); // 대사가 끝날 때까지 대기(초 설정)
         }
 
         // 다음 씬 이동
