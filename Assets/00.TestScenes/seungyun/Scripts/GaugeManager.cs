@@ -64,19 +64,20 @@ public class GaugeManager : MonoBehaviour
     {
         Debug.Log("페이드 아웃");
         canvas.SetActive(false);
+        printerSound.Stop();
+
         // 암전
         if (screenFade2 != null)
         {
             screenFade2.FadeOut(); 
         }
-        printerSound.Stop();
-
+        yield return new WaitForSeconds(2.0f);
+        
         // 나레이션 재생
-        EndingAudio.Play();
         if (EndingAudio != null)
         {
             EndingAudio.Play();
-            yield return new WaitForSeconds(60.0f); // 대사가 끝날 때까지 대기(초 설정)
+            yield return new WaitForSeconds(EndingAudio.clip.length + 2.0f); // 대사가 끝날 때까지 대기(초 설정)
         }
 
         // 다음 씬 이동

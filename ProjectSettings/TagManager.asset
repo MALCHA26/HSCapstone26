@@ -10,6 +10,7 @@ TagManager:
   - VoiceUI
   - Bullet
   - script
+  - Cart
   layers:
   - Default
   - TransparentFX
