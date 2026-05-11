@@ -94,7 +94,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 8ece407aa230cc54283b333284fd3c76, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -277,7 +277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8205262489536573498, guid: 8f65a91bc18df8642ad4d01039477d2f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.32
+      value: -8.44
       objectReference: {fileID: 0}
     - target: {fileID: 8205262489536573498, guid: 8f65a91bc18df8642ad4d01039477d2f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -502,6 +502,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21253411ede5d484293abef2f8ffe5db, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -524,7 +528,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &670755083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,7 +778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7232576270036743976, guid: b87a6810af4067b458f513ef40ec7629, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.40497
+      value: -7.6
       objectReference: {fileID: 0}
     - target: {fileID: 7232576270036743976, guid: b87a6810af4067b458f513ef40ec7629, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1191,7 +1195,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0587a7a1dd081b645aa59917695ed09a, type: 2}
+  - {fileID: 2100000, guid: 0447ca0fba07936439d85d90c25edf24, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1607,7 +1611,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0587a7a1dd081b645aa59917695ed09a, type: 2}
+  - {fileID: 2100000, guid: 0447ca0fba07936439d85d90c25edf24, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2399,6 +2403,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Screen
       objectReference: {fileID: 0}
+    - target: {fileID: 7160830131316606564, guid: d2facc0999a561d4aac7e423eed8a884, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7380738824885871638, guid: d2facc0999a561d4aac7e423eed8a884, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2506,6 +2514,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8289475153458929727, guid: 2693e98365221174b8b02f7ba7a1f31e, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365123243284536674, guid: 2693e98365221174b8b02f7ba7a1f31e, type: 3}
+      propertyPath: m_PresetInfoIsWorld
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
