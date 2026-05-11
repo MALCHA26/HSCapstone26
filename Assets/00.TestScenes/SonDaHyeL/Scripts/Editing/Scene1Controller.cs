@@ -23,7 +23,7 @@ public class Scene1Controller : AllSceneController
     {
         // 1. 영상 재생
         bool videoDone = false;
-        //videoPlayer.onComplete = () => videoDone = true;
+        videoPlayer.onComplete = () => videoDone = true;
 
         yield return Narrate("지금 보이는 장면은 우리가 알고 있는 역사와는 사뭇 다른 모습입니다.");
         yield return Narrate("만약 우리의 외침이 세상에 닿지 못했다면, 실제 역사 또한 이처럼 어둡게 남았을지도 모릅니다.");
