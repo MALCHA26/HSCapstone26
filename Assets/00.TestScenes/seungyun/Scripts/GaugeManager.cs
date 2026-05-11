@@ -14,30 +14,33 @@ public class GaugeManager : MonoBehaviour
 {
     public Image gaugeImage; // 게이지 이미지(독립선언서)
     public GameObject voiceUI; // STT 활성화 시 표시 텍스트
-    public STTManager sttManager; // STT 관리 스크립트
     public GameObject canvas;
+
+    public STTManager sttManager; // STT 관리 스크립트
     public AudioSource printerSound;
     public AudioSource EndingTTS; 
     public float decreaseGauge = 2f; // 1초에 깎이는 수치 
+
     private OVRScreenFade screenFade2;
     private float currentScore = 100; // 현재 점수
     private const float maxScore = 100f; // 최대 점수
     private bool isOver = false; // 페이드 아웃 기준
     private bool isStarted = false; // 게이지 감소 시작 기준
-
+    private bool isFound = false;
     void Start()
     {
         currentScore = maxScore;
-        if (gaugeImage != null)
-        {
-            gaugeImage.fillAmount = currentScore / maxScore; 
-        }
         screenFade2 = FindFirstObjectByType<OVRScreenFade>();
     }
 
     void Update()
     {
+        if (!isFound)
+        {
+            CheckCamera();
+        }
         if (!isStarted || isOver) return;
+
         // 지속적으로 게이지 감소
         currentScore -= decreaseGauge * Time.deltaTime;
 
@@ -55,7 +58,35 @@ public class GaugeManager : MonoBehaviour
             StartCoroutine(ProcessEnding());
         }
     }
+    void CheckCamera()
+    {
+        GameObject cameraRig = GameObject.FindWithTag("Camera");
+        if (cameraRig != null)
+        {
+            Canvas foundCanvas = cameraRig.GetComponentInChildren<Canvas>(true);
+            if (foundCanvas != null)
+            {
+                canvas = foundCanvas.gameObject;
+                Transform gaugeImg = canvas.transform.Find("CurrentGauge");
+                if (gaugeImg != null)
+                {
+                    gaugeImage = gaugeImg.GetComponent<Image>();
+                }
+                Transform voiceTxt = canvas.transform.Find("VoiceUIText");
+                if (voiceTxt != null)
+                {
+                    voiceUI = voiceTxt.gameObject;
+                }
 
+                // 초기 게이지 세팅
+                if (canvas != null && gaugeImage != null && voiceUI != null)
+                {
+                    isFound = true;
+                    gaugeImage.fillAmount = currentScore / maxScore;
+                }
+            }
+        }
+    }
     IEnumerator ProcessEnding()
     {
         Debug.Log("페이드 아웃");

@@ -42,6 +42,7 @@ public class STTManager : MonoBehaviour
         // 다시 STT 시작
         sttAgent.StartListening();
     }
+
     // STT Stop 함수
     public void StopSTT()
     {

@@ -18,9 +18,9 @@ public class DoorOpener : MonoBehaviour
     private bool isOpen = false;
     public float openAngle = 90f; // 문 각도
     public float smoothTime = 2f; // 열리는 속도
-
     private Quaternion closedRotation;
     private Quaternion openRotation;
+    bool isFound = false;
 
     void Start()
     {
@@ -32,12 +32,30 @@ public class DoorOpener : MonoBehaviour
 
     void Update()
     {
+        if (!isFound)
+        {
+           CheckCamera();
+        }
         if (!isOpen && handleTransform != null)
         {
             CheckHandleRotation();
         }
         Quaternion target = isOpen ? openRotation : closedRotation;
         transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smoothTime);
+    }
+    void CheckCamera()
+    {
+        GameObject rig = GameObject.FindWithTag("Camera");
+        if (rig != null)
+        {
+            Canvas foundCanvas = rig.GetComponentInChildren<Canvas>(true);
+
+            if (foundCanvas != null)
+            {
+                gaugeCanvas = foundCanvas.gameObject;
+                isFound = true;
+            }
+        }
     }
     void CheckHandleRotation()
     {
@@ -56,7 +74,10 @@ public class DoorOpener : MonoBehaviour
         {
             isOpen = true;
             knockAudio.Stop();
-            gaugeCanvas.GetComponent<CanvasGroup>().alpha = 1f;
+            if(gaugeCanvas != null)
+            {
+                gaugeCanvas.SetActive(true);
+            }
             if (gaugeManager != null)
             {
                 gaugeManager.StartGauge();
