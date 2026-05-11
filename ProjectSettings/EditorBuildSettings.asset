@@ -39,6 +39,9 @@ EditorBuildSettings:
     path: Assets/00.TestScenes/seungyun/Scene/Scene3-LightEffect.unity
     guid: fbdd8f3ad60b14549bbba2fa5fe642ab
   - enabled: 1
+    path: Assets/00.TestScenes/joyeeon/Scenes/Scene1.unity
+    guid: 5cefcffd82b03ed4f952711db31dba66
+  - enabled: 1
     path: Assets/00.TestScenes/seungyun/Scene/Scene2-LightEffect.unity
     guid: cc4d3847db448de4a967e1ab9ad5097e
   m_configObjects:
