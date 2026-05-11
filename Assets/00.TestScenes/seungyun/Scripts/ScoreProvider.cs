@@ -31,15 +31,24 @@ public class ScoreProvider : MonoBehaviour
     };
     private string currentTarget;
     private bool checkingSTT = false;
+    private int lastIndex = -1; // 대사 중복 방지
     void Start()
     {
+        GameObject text = GameObject.FindWithTag("script");
+        promptText = text.GetComponent<TextMeshProUGUI>();
         SetNewPrompt();
     }
 
     // 새로운 랜덤 제시어 뽑기
     public void SetNewPrompt()
     {
-        int randomIndex = Random.Range(0, sentences.Length);
+        int randomIndex;
+        do
+        {
+            randomIndex = Random.Range(0, sentences.Length);
+        } while (randomIndex == lastIndex);
+
+        lastIndex = randomIndex; // 새로 뽑은 인덱스 저장
         currentTarget = sentences[randomIndex];
 
         if (promptText != null)
@@ -53,7 +62,7 @@ public class ScoreProvider : MonoBehaviour
     {
         if (checkingSTT) return;
 
-        // STT 특성상 띄어쓰기나 마침표가 다를 수 있으므로 다 빼고 비교
+        // 띄어쓰기나 마침표 제거 후 비교
         string cleanRecognized = recognizedText.Replace(" ", "").Replace(".", "").Trim();
         string cleanTarget = currentTarget.Replace(" ", "").Replace(".", "").Trim();
         bool isMatch = cleanRecognized.Contains(cleanTarget);

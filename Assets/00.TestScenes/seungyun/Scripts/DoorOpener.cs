@@ -9,7 +9,7 @@ using UnityEngine;
 public class DoorOpener : MonoBehaviour
 {
     public Transform handleTransform;
-    public float triggerAngle = 60f;   // 문 열리는 손잡이 회전 각도
+    public float triggerAngle = 100f;   // 문 열리는 손잡이 회전 각도
     public GameObject guideCanvas;
     public AudioSource knockAudio;
     public STTManager sttManager;
@@ -24,6 +24,7 @@ public class DoorOpener : MonoBehaviour
 
     void Start()
     {
+        gaugeCanvas = GameObject.FindWithTag("GaugeCanvas");
         // 닫힌 상태
         closedRotation = transform.rotation;
         // 열린 상태의 목표 회전값
@@ -56,8 +57,7 @@ public class DoorOpener : MonoBehaviour
         {
             isOpen = true;
             knockAudio.Stop();
-            gaugeCanvas.SetActive(true);
-
+            gaugeCanvas.GetComponent<CanvasGroup>().alpha = 1f;
             if (gaugeManager != null)
             {
                 gaugeManager.StartGauge();
