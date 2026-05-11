@@ -24,7 +24,6 @@ public class DoorOpener : MonoBehaviour
 
     void Start()
     {
-        gaugeCanvas = GameObject.FindWithTag("GaugeCanvas");
         // 닫힌 상태
         closedRotation = transform.rotation;
         // 열린 상태의 목표 회전값

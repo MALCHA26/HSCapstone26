@@ -34,8 +34,6 @@ public class ScoreProvider : MonoBehaviour
     private int lastIndex = -1; // 대사 중복 방지
     void Start()
     {
-        GameObject text = GameObject.FindWithTag("script");
-        promptText = text.GetComponent<TextMeshProUGUI>();
         SetNewPrompt();
     }
 
