@@ -21,7 +21,6 @@ public class Scene1Controller : AllSceneController
 
     protected override IEnumerator RunSequence()
     {
-        /*
         // 1. 영상 재생
         bool videoDone = false;
         //videoPlayer.onComplete = () => videoDone = true;
@@ -69,7 +68,6 @@ public class Scene1Controller : AllSceneController
         yield return PlayMap("선언서는 이후 여러 독립운동가들의 손을 거쳐 2월 28일 아침부터 전국 각지로 운반될 수 있었습니다.");
         yield return PlayMap("이 모든 노력이 모여 3·1운동 당일, 태화관에서 민족대표 33인이 독립선언식을 거행할 수 있는 기반이 마련될 수 있었던 것입니다.");
         mapEffect.End();
-        */
 
         // 6. 인쇄기 스폰
         soundManager.Play("Typing", 0.1f);
