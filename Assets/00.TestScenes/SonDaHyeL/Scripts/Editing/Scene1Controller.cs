@@ -17,6 +17,10 @@ public class Scene1Controller : AllSceneController
     [SerializeField] private ObjectSpawn printerSpawner;
     [SerializeField] protected Paper paper;
 
+
+    [Header("캔버스 제어")]
+    [SerializeField] private GameObject videoCanvas;
+
     private bool screenActive = false;
 
     protected override IEnumerator RunSequence()
@@ -31,6 +35,9 @@ public class Scene1Controller : AllSceneController
 
         yield return new WaitUntil(() => videoDone);
         yield return VideoFadeTransition();
+
+        //비디오 캔버스 비활성화
+        videoCanvas.SetActive(false);
 
         yield return Narrate("1919년 3월 1일. 전국 곳곳에서 울려 퍼진 '대한독립만세'의 함성.");
 

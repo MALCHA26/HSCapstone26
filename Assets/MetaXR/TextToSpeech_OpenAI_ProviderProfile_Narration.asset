@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TextToSpeech_OpenAI_ProviderProfile_Narration
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks.AIBlocks::Meta.XR.BuildingBlocks.AIBlocks.OpenAIProvider
   supportedInferenceTypes: 1
-  apiKey: 
+  apiKey: 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
   overrideApiKey: 1
   apiRoot: https://api.openai.com/v1/speech
   model: tts-1
