@@ -14,16 +14,16 @@ public class GaugeManager : MonoBehaviour
 {
     public Image gaugeImage; // 게이지 이미지(독립선언서)
     public GameObject voiceUI; // STT 활성화 시 표시 텍스트
-    public STTManager sttManager;
-    private OVRScreenFade screenFade2;
+    public STTManager sttManager; // STT 관리 스크립트
     public GameObject canvas;
     public AudioSource printerSound;
-    public AudioSource EndingAudio;
+    public AudioSource EndingTTS; 
     public float decreaseGauge = 2f; // 1초에 깎이는 수치 
+    private OVRScreenFade screenFade2;
     private float currentScore = 100; // 현재 점수
     private const float maxScore = 100f; // 최대 점수
-    private bool isOver = false;
-    private bool isStarted = false;
+    private bool isOver = false; // 페이드 아웃 기준
+    private bool isStarted = false; // 게이지 감소 시작 기준
 
     void Start()
     {
@@ -74,10 +74,10 @@ public class GaugeManager : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
         
         // 나레이션 재생
-        if (EndingAudio != null)
+        if (EndingTTS != null)
         {
-            EndingAudio.Play();
-            yield return new WaitForSeconds(EndingAudio.clip.length + 2.0f); // 대사가 끝날 때까지 대기(초 설정)
+            EndingTTS.Play();
+            yield return new WaitForSeconds(EndingTTS.clip.length + 2.0f); // 대사가 끝날 때까지 대기(초 설정)
         }
 
         // 다음 씬 이동
