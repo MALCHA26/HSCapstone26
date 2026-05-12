@@ -26,7 +26,7 @@ public class Scene1Controller : AllSceneController
     protected override IEnumerator RunSequence()
     {
         // 1. 영상 재생
-        bool videoDone = false;
+        /*bool videoDone = false;
         videoPlayer.onComplete = () => videoDone = true;
 
         yield return Narrate("지금 보이는 장면은 우리가 알고 있는 역사와는 사뭇 다른 모습입니다.");
@@ -34,7 +34,7 @@ public class Scene1Controller : AllSceneController
         yield return Narrate("이러한 암울한 가능성을 밀어낼 수 있었던 것은, 역사를 바꾼 작은 불씨가 있었기 때문입니다.");
 
         yield return new WaitUntil(() => videoDone);
-        yield return VideoFadeTransition();
+        yield return VideoFadeTransition();*/
 
         //비디오 캔버스 비활성화
         videoCanvas.SetActive(false);
@@ -46,7 +46,7 @@ public class Scene1Controller : AllSceneController
         paperDrop.onComplete = () => dropDone = true;
         paperDrop.Drop();
         soundManager.Play("PaperFall", 0.5f);
-        yield return Narrate("이 거대한 역사의 물결은 오늘 밤 이곳에서 찍어낸 3만 5천 장의 '기미독립선언서'가 없었다면 시작되기 어려웠을 것입니다.");
+        //yield return Narrate("이 거대한 역사의 물결은 오늘 밤 이곳에서 찍어낸 3만 5천 장의 '기미독립선언서'가 없었다면 시작되기 어려웠을 것입니다.");
 
         yield return new WaitUntil(() => dropDone);
 
