@@ -51,12 +51,12 @@ public class Scene1Controller : AllSceneController
         yield return new WaitUntil(() => dropDone);
 
         // 3. 종이 잡기 대기
-        bool grabbed = false;
+       /* bool grabbed = false;
         paper.onGrabbed = () => grabbed = true;
-        yield return new WaitUntil(() => grabbed);
+        yield return new WaitUntil(() => grabbed);*/
 
         // 4. 스크린 연출
-        yield return Narrate("기미독립선언서는 이렇게 시작합니다.");
+       /* yield return Narrate("기미독립선언서는 이렇게 시작합니다.");
         soundManager.Play("PageFlip", 1f);
         yield return PlayScreen("우리는 이에 우리 조선이 독립국임과 조선인이 이 나라의 주인임을 선언한다.");
         yield return Narrate("여러분이 손에 쥐고 계신 가벼운 종이 한 장에는, 우리 민족이 스스로의 정당한 권리를 회복하고 후손들에게 억압이 아닌 온전한 자유와 행복을 물려주고자 했던 간절한 염원이 담겨 있습니다.");
@@ -74,7 +74,7 @@ public class Scene1Controller : AllSceneController
         yield return PlayMap("이렇게 인쇄된 선언서는 비밀리에 경운동에 있던 이종일 선생의 자택으로 옮겨졌습니다.");
         yield return PlayMap("선언서는 이후 여러 독립운동가들의 손을 거쳐 2월 28일 아침부터 전국 각지로 운반될 수 있었습니다.");
         yield return PlayMap("이 모든 노력이 모여 3·1운동 당일, 태화관에서 민족대표 33인이 독립선언식을 거행할 수 있는 기반이 마련될 수 있었던 것입니다.");
-        mapEffect.End();
+        mapEffect.End();*/
 
         // 6. 인쇄기 스폰
         soundManager.Play("Typing", 0.1f);
