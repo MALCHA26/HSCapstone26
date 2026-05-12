@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &849864905956071775
 Transform:
   m_ObjectHideFlags: 0
@@ -2623,6 +2623,9 @@ MonoBehaviour:
   MRUKInstance:
   - {fileID: 0}
   - {fileID: 0}
+  MocapSceneChanger: {fileID: 0}
+  targetScene: Scene3-LightEffect
+  VRplayer: {fileID: 0}
 --- !u!114 &5396926971471131320
 MonoBehaviour:
   m_ObjectHideFlags: 0
