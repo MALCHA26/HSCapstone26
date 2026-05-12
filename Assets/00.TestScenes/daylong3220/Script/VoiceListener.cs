@@ -7,7 +7,7 @@ public class VoiceListener : MonoBehaviour
 {
     // [중요] 인스펙터에서 [BuildingBlock] Dictation 오브젝트를 여기로 드래그하세요.
     [SerializeField] private DictationService dictationService;
-    private OpenAIRequester ai;
+    [SerializeField] private OpenAIRequester ai;
     public string Player_text;
     void Awake()
     {
@@ -23,10 +23,8 @@ public class VoiceListener : MonoBehaviour
 
     void Start()
     {
-        // 2. 마이크 강제 실행
         if (dictationService != null)
         {
-            ai = GameObject.Find("aimanager").GetComponent<OpenAIRequester>();
             dictationService.Activate();
             Debug.Log("마이크 활성화 시도 중...");
         }
@@ -34,6 +32,13 @@ public class VoiceListener : MonoBehaviour
 
     public void more()
     {
+        // TTS 재생 중엔 버튼 무시
+        if (ai != null && ai.isSpeaking)
+        {
+            Debug.Log("[VoiceListener] TTS 재생 중 - 버튼 무시");
+            return;
+        }
+
         Player_text = "대기중";
         dictationService.Activate();
         Debug.Log("다시 말씀해주세요.");
