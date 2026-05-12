@@ -33,7 +33,7 @@ public class cshMocapPlayer : MonoBehaviourPun
     {
         Debug.Log("rpc Called");
         DontDestroyOnLoad(gameObject);
-        VRplayer = GameObject.Find("VRPlayer (clone)");
+        VRplayer = GameObject.Find("VRPlayer(Clone)");
         DontDestroyOnLoad(VRplayer);
         PhotonNetwork.LoadLevel(targetScene);
         

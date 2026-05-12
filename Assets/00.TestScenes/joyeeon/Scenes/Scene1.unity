@@ -403,6 +403,10 @@ PrefabInstance:
       value: Paper
       objectReference: {fileID: 0}
     - target: {fileID: 7978691741831185359, guid: 8f65a91bc18df8642ad4d01039477d2f, type: 3}
+      propertyPath: scenename
+      value: Scene1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978691741831185359, guid: 8f65a91bc18df8642ad4d01039477d2f, type: 3}
       propertyPath: intoPrefab
       value: 
       objectReference: {fileID: 2839769773220188738, guid: 68f667371fdd023479f87eb4fcd606a9, type: 3}

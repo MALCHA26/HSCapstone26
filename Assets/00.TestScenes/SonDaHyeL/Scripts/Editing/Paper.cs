@@ -13,6 +13,9 @@ public class Paper : MonoBehaviour, IGrabbable
     [SerializeField] private GameObject intoPrefab;
     [SerializeField] private Transform intoSpawnPoint;
 
+    [Header("현재 씬 구분")]
+    [SerializeField] private string scenename = "Scene3-2";
+
     public Action onGrabbed;
     private bool grabTriggered = false;
     private bool isTriggered = false;
@@ -56,10 +59,18 @@ public class Paper : MonoBehaviour, IGrabbable
             if (intoPrefab != null)
                 Instantiate(intoPrefab, intoSpawnPoint.position, intoSpawnPoint.rotation);
 
-            // SceneController로 충돌 신호 전달 > 다음 씬 로드 호출
-            //sceneController?.LoadNextScene();
-            lobbyManager.Connect();
-            Debug.Log("로비매니저커넥트 호출");
+
+            if (scenename == "Scene3-2")
+            {
+                //SceneController로 충돌 신호 전달 > 다음 씬 로드 호출
+                sceneController?.LoadNextScene();
+            }
+            else if (scenename == "Scene1")
+            {
+                lobbyManager.Connect();
+                Debug.Log("로비매니저커넥트 호출");
+            }
+            
 
             Destroy(gameObject);
         }

@@ -15071,7 +15071,7 @@ Transform:
   m_GameObject: {fileID: 658406787}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33892,7 +33892,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44dfd9e509c19440bcabe1a3630fad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MocapSceneChanger
-  targetScene: Scene3-LightEffect
 --- !u!4 &1176335417
 Transform:
   m_ObjectHideFlags: 0
