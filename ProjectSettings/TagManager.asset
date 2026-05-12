@@ -11,8 +11,9 @@ TagManager:
   - Bullet
   - script
   - Cart
-  - PRINTER
   - Pickup
+  - Camera
+  - PRINTER
   layers:
   - Default
   - TransparentFX
@@ -45,7 +46,7 @@ TagManager:
   - 
   - 
   - 
-  - OVROverlayCanvas Rendering
+  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0

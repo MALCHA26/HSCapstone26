@@ -7,13 +7,23 @@ using UnityEngine;
 using UnityEngine.SceneManagement; 
 public class Scene3Changer : MonoBehaviour
 {
-    public string nextSceneName = "Scene4"; // 이동할 씬 이름
-    public string targetTag = "Cart"; 
+    public string nextSceneName = "Scene3-2"; // 이동할 씬 이름
+    public string targetTag = "Cart";
+    private OVRScreenFade screenFade3;
+    void Start()    
+    {
+        screenFade3 = FindFirstObjectByType<OVRScreenFade>();
+
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(targetTag))
         {
+            if (screenFade3 != null)
+            {
+                screenFade3.FadeOut();
+            }
             ChangeScene();
         }
     }
