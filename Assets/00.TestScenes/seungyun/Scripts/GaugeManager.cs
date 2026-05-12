@@ -108,7 +108,7 @@ public class GaugeManager : MonoBehaviour
         }
 
         // 다음 씬 이동
-        SceneManager.LoadScene("Scene3-LightEffect");
+        //SceneManager.LoadScene("Scene3-LightEffect");
     }
 
     // 마이크가 켜질 때 UI에 표시

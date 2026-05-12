@@ -25,6 +25,8 @@ public class Scene1Controller : AllSceneController
 
     protected override IEnumerator RunSequence()
     {
+
+        /*
         // 1. 영상 재생
         bool videoDone = false;
         videoPlayer.onComplete = () => videoDone = true;
@@ -36,25 +38,30 @@ public class Scene1Controller : AllSceneController
         yield return new WaitUntil(() => videoDone);
         yield return VideoFadeTransition();
 
+        */
         //비디오 캔버스 비활성화
         videoCanvas.SetActive(false);
 
-        yield return Narrate("1919년 3월 1일. 전국 곳곳에서 울려 퍼진 '대한독립만세'의 함성.");
+       // yield return Narrate("1919년 3월 1일. 전국 곳곳에서 울려 퍼진 '대한독립만세'의 함성.");
+
+        
+
 
         // 2. 종이 FallPaper 애니메이션 실행
         bool dropDone = false;
         paperDrop.onComplete = () => dropDone = true;
         paperDrop.Drop();
         soundManager.Play("PaperFall", 0.5f);
-        yield return Narrate("이 거대한 역사의 물결은 오늘 밤 이곳에서 찍어낸 3만 5천 장의 '기미독립선언서'가 없었다면 시작되기 어려웠을 것입니다.");
+        //yield return Narrate("이 거대한 역사의 물결은 오늘 밤 이곳에서 찍어낸 3만 5천 장의 '기미독립선언서'가 없었다면 시작되기 어려웠을 것입니다.");
 
         yield return new WaitUntil(() => dropDone);
 
         // 3. 종이 잡기 대기
-        bool grabbed = false;
+       bool grabbed = false;
         paper.onGrabbed = () => grabbed = true;
         yield return new WaitUntil(() => grabbed);
 
+        /*
         // 4. 스크린 연출
         yield return Narrate("기미독립선언서는 이렇게 시작합니다.");
         soundManager.Play("PageFlip", 1f);
@@ -75,6 +82,8 @@ public class Scene1Controller : AllSceneController
         yield return PlayMap("선언서는 이후 여러 독립운동가들의 손을 거쳐 2월 28일 아침부터 전국 각지로 운반될 수 있었습니다.");
         yield return PlayMap("이 모든 노력이 모여 3·1운동 당일, 태화관에서 민족대표 33인이 독립선언식을 거행할 수 있는 기반이 마련될 수 있었던 것입니다.");
         mapEffect.End();
+
+        */
 
         // 6. 인쇄기 스폰
         soundManager.Play("Typing", 0.1f);
