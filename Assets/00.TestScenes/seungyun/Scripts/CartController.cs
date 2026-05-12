@@ -4,6 +4,8 @@
  * 역할: 컨트롤러 그립 입력을 감지하여 수레 이동 처리 스크립트
  */
 
+using Photon.Realtime;
+using System.Collections;
 using UnityEngine;
 
 public class CartController : MonoBehaviour
@@ -24,10 +26,49 @@ public class CartController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        StartCoroutine(FindMyHandsRoutine());
+    }
+    private IEnumerator FindMyHandsRoutine()
+    {
+        // 손을 찾을 때까지 계속 반복 (Update를 대체하는 효율적인 방법)
+        while (leftHandAnchor == null || rightHandAnchor == null)
+        {
+            // 씬에 있는 모든 VR 플레이어를 찾음
+            GameObject playerObj = GameObject.Find("VRPlayer(Clone)");
+            if(playerObj != null)
+            {
+                cshVRPlayer player = playerObj.GetComponent<cshVRPlayer>();
+                leftHandAnchor = player.transform.Find("[VR] Camera Rig/TrackingSpace/LeftHandAnchor");
+                rightHandAnchor = player.transform.Find("[VR] Camera Rig/TrackingSpace/RightHandAnchor");
+            }
+
+            /*foreach (cshVRPlayer player in allPlayers)
+            {
+                // 핵심!! "이 플레이어가 '내(Local)' 캐릭터인가?"
+                if (player.photonView.IsMine)
+                {
+                    // 맞다면 그 플레이어의 손 앵커를 가져옴
+                    leftHandAnchor = player.transform.Find("[VR] Camera Rig/TrackingSpace/LeftHandAnchor");
+                    rightHandAnchor = player.transform.Find("[VR] Camera Rig/TrackingSpace/RightHandAnchor");
+
+                    if (leftHandAnchor != null && rightHandAnchor != null)
+                    {
+                        Debug.Log("<color=cyan>수레: 내 주인의 손을 찾아서 연결 완료! 탐색을 종료합니다.</color>");
+                        yield break; // 코루틴 완전 종료 (더 이상 감지하지 않음)
+                    }
+                }
+            }*/
+
+            // 아직 내 캐릭터가 씬에 로드되지 않았다면 0.5초 대기 후 다시 시도
+            yield return new WaitForSeconds(0.5f);
+        }
     }
 
     void Update()
     {
+        // 손이 아직 연결 안 됐으면 수레 로직 정지 (에러 방지)
+        if (leftHandAnchor == null || rightHandAnchor == null) return;
         HandleInput();
         if (isGrabbed && activeController != null)
         {
