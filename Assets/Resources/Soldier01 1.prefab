@@ -129,13 +129,13 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de8f7909ccca5344c8a98e255ccb4a67, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -3176379178415770267}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de8f7909ccca5344c8a98e255ccb4a67, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2121361864858210860}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de8f7909ccca5344c8a98e255ccb4a67, type: 3}
       insertIndex: -1
       addedObject: {fileID: -2574334749206752581}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: de8f7909ccca5344c8a98e255ccb4a67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3176379178415770267}
     - targetCorrespondingSourceObject: {fileID: -4258411891960909470, guid: de8f7909ccca5344c8a98e255ccb4a67, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4733129442439522018}
@@ -1323,21 +1323,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: de8f7909ccca5344c8a98e255ccb4a67, type: 3}
   m_PrefabInstance: {fileID: 1518401473896305676}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-3176379178415770267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1860861623720864093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6226842a13d56fc4b9f6ffc41f7ef0ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OptitrackSkeletonAnimator
-  StreamingClient: {fileID: 0}
-  SkeletonAssetName: Skeleton001
-  DestinationAvatar: {fileID: 9000000, guid: de8f7909ccca5344c8a98e255ccb4a67, type: 3}
 --- !u!114 &2121361864858210860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1375,6 +1360,21 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &-3176379178415770267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860861623720864093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6226842a13d56fc4b9f6ffc41f7ef0ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OptitrackSkeletonAnimator
+  StreamingClient: {fileID: 0}
+  SkeletonAssetName: Skeleton001
+  DestinationAvatar: {fileID: 9000000, guid: de8f7909ccca5344c8a98e255ccb4a67, type: 3}
 --- !u!1 &1873310266317685892 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 931444521364983944, guid: de8f7909ccca5344c8a98e255ccb4a67, type: 3}
