@@ -3595,7 +3595,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6616851159561148326}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f14643063da136546be3fb0b56193b47, type: 3}
   m_Name: 
@@ -3727,6 +3727,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6489751725859313226}
+  - component: {fileID: 7478820912126069898}
   m_Layer: 0
   m_Name: CartPrefabBooks
   m_TagString: Untagged
@@ -3751,6 +3752,24 @@ Transform:
   - {fileID: 2436676440457686543}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7478820912126069898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6864174832524883850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14643063da136546be3fb0b56193b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CartController
+  leftHandAnchor: {fileID: 0}
+  rightHandAnchor: {fileID: 0}
+  leftHandlePoint: {fileID: 1069203466543528681}
+  rightHandlePoint: {fileID: 6512243158049500465}
+  grabDistance: 0.3
+  moveSpeed: 15
 --- !u!1 &6976263873588724633
 GameObject:
   m_ObjectHideFlags: 0

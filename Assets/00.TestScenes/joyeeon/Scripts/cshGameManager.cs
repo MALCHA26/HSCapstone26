@@ -41,9 +41,12 @@ public class cshGameManager : MonoBehaviourPun // 점수와 게임 오버 여부 및 게임 
 
     private void Start()
     {
+
         // 생성할 랜덤 위치 지정
         Vector3 mocapSpawnPos = SpawnPosPrefab.transform.position;//Random.insideUnitSphere * 5f;
         Vector3 vrSpawnPos = VRPosPrefab.transform.position;//Random.insideUnitSphere * 5f;
+
+
         // 네트워크상의 모든 클라이언트에서 생성 실행  
         // 해당 게임 오브젝트의 주도권은 생성 메서드를 직접 실행한 클라이언트에 있음
         PlayerInfo = FindFirstObjectByType<cshPlayerInfo>();
@@ -51,5 +54,9 @@ public class cshGameManager : MonoBehaviourPun // 점수와 게임 오버 여부 및 게임 
             PhotonNetwork.Instantiate(MocapPlayerPrefab.name, mocapSpawnPos, Quaternion.identity);
         if (PlayerInfo.playerInfo == 2)
             PhotonNetwork.Instantiate(VRPlayerPrefab.name, vrSpawnPos, Quaternion.identity);
+
+        Debug.Log("mocapSpawnPos: " + mocapSpawnPos);
+        Debug.Log("vrSpawnPos: " + vrSpawnPos);
+        Debug.Log("PlayerInfo.playerInfo: " + PlayerInfo.playerInfo);
     }
 }
