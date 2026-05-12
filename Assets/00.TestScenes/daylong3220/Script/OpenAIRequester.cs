@@ -8,6 +8,8 @@ public class OpenAIRequester : MonoBehaviour
     private string apiKey = "";
     private string model = "gpt-4o-mini";
     public string answer;
+    public bool isSpeaking = false;
+    public System.Action<string> onAnswerReceived; // 답변 수신 시 외부 콜백
 
     private OpenAIRequest requestData;
 
@@ -88,6 +90,9 @@ public class OpenAIRequester : MonoBehaviour
         {
             Debug.Log("OpenAI 대답: " + response.text);
             answer = response.text;
+
+            // 답변 텍스트를 외부(Scene4Controller)로 전달
+            onAnswerReceived?.Invoke(response.text);
         }
     }
 

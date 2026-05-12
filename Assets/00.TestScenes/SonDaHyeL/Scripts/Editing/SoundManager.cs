@@ -6,6 +6,7 @@
 
 using UnityEngine;
 using System;
+using System.Collections;
 
 public class SoundManager : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class SoundManager : MonoBehaviour
         audioSource = gameObject.AddComponent<AudioSource>();
     }
 
-    public void Play(string soundName, float volume)
+    public void Play(string soundName, float volume = 1f)
     {
         SoundClip found = Array.Find(sounds, s => s.name == soundName);
         if (found == null)
@@ -37,6 +38,23 @@ public class SoundManager : MonoBehaviour
             return;
         }
 
-        audioSource.PlayOneShot(found.clip,volume);
+        audioSource.PlayOneShot(found.clip, volume);
+    }
+
+    // 재생 완료까지 대기
+    public IEnumerator PlayAndWait(string soundName, float volume = 1f)
+    {
+        SoundClip found = Array.Find(sounds, s => s.name == soundName);
+        if (found == null)
+        {
+            Debug.Log($"[SoundManager] '{soundName}' 효과음을 찾을 수 없습니다.");
+            yield break;
+        }
+
+        audioSource.clip = found.clip;
+        audioSource.volume = volume;
+        audioSource.Play();
+
+        yield return new WaitUntil(() => !audioSource.isPlaying);
     }
 }

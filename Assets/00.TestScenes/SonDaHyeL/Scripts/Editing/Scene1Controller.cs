@@ -17,13 +17,17 @@ public class Scene1Controller : AllSceneController
     [SerializeField] private ObjectSpawn printerSpawner;
     [SerializeField] protected Paper paper;
 
+
+    [Header("캔버스 제어")]
+    [SerializeField] private GameObject videoCanvas;
+
     private bool screenActive = false;
 
     protected override IEnumerator RunSequence()
     {
         // 1. 영상 재생
         bool videoDone = false;
-        //videoPlayer.onComplete = () => videoDone = true;
+        videoPlayer.onComplete = () => videoDone = true;
 
         yield return Narrate("지금 보이는 장면은 우리가 알고 있는 역사와는 사뭇 다른 모습입니다.");
         yield return Narrate("만약 우리의 외침이 세상에 닿지 못했다면, 실제 역사 또한 이처럼 어둡게 남았을지도 모릅니다.");
@@ -31,6 +35,9 @@ public class Scene1Controller : AllSceneController
 
         yield return new WaitUntil(() => videoDone);
         yield return VideoFadeTransition();
+
+        //비디오 캔버스 비활성화
+        videoCanvas.SetActive(false);
 
         yield return Narrate("1919년 3월 1일. 전국 곳곳에서 울려 퍼진 '대한독립만세'의 함성.");
 

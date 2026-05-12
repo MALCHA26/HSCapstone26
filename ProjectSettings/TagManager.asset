@@ -11,6 +11,9 @@ TagManager:
   - Bullet
   - script
   - Cart
+  - Pickup
+  - Camera
+  - PRINTER
   layers:
   - Default
   - TransparentFX
@@ -19,7 +22,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Overlay UI
   - 
   - 
   - 
