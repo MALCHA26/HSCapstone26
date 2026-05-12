@@ -6,7 +6,7 @@ public class cshMocapPlayer : MonoBehaviourPun
     public GameObject[] MRUKInstance;
     public MocapSceneChanger MocapSceneChanger;
     public string targetScene = "Scene3-LightEffect";
-
+    public GameObject VRplayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -32,6 +32,9 @@ public class cshMocapPlayer : MonoBehaviourPun
     public void LoadmyNextScene(string targetScene)
     {
         Debug.Log("rpc Called");
+        DontDestroyOnLoad(gameObject);
+        VRplayer = GameObject.Find("VRPlayer (clone)");
+        DontDestroyOnLoad(VRplayer);
         PhotonNetwork.LoadLevel(targetScene);
         
     }
