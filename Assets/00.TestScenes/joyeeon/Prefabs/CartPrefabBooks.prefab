@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 861078343026008734}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Cart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1220,7 +1220,7 @@ GameObject:
   - component: {fileID: 1173277038043817057}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Cart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1704,7 +1704,7 @@ GameObject:
   - component: {fileID: 5376105618890652160}
   m_Layer: 0
   m_Name: CartColider
-  m_TagString: Untagged
+  m_TagString: Cart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3153,7 +3153,7 @@ GameObject:
   - component: {fileID: 8377533463436836432}
   m_Layer: 0
   m_Name: Cube (4)
-  m_TagString: Untagged
+  m_TagString: Cart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4187,7 +4187,7 @@ GameObject:
   - component: {fileID: 1856633778639127437}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Cart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5373,7 +5373,7 @@ GameObject:
   - component: {fileID: 1428503512049670358}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Cart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7277,6 +7277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vehicle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 97ed0e6b193a64d4ea5da35b7d616d06, type: 3}
+      propertyPath: m_TagString
+      value: Cart
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7638,6 +7642,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 97ed0e6b193a64d4ea5da35b7d616d06, type: 3}
       propertyPath: m_Name
       value: Vehicle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 97ed0e6b193a64d4ea5da35b7d616d06, type: 3}
+      propertyPath: m_TagString
+      value: Cart
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
