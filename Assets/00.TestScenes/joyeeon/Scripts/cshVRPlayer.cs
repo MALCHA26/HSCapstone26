@@ -17,24 +17,26 @@ public class cshVRPlayer : MonoBehaviourPun
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (!photonView.IsMine) return;
-        
-          /*  Transform leftAnchor = transform.Find("LeftHandAnchor");
-            Transform rightAnchor = transform.Find("RightHandAnchor");
-
-            CartController cartcontroller = FindObjectOfType<CartController>();
-            if (cartcontroller != null) {
-                cartcontroller.leftHandAnchor = leftAnchor;
-                cartcontroller.rightHandAnchor = rightAnchor;
-                Debug.Log("수레에 손 앵커 등록 완료");
-            }
-*/
+        if (!photonView.IsMine)
+        {
             GameObject[] Camera = GameObject.FindGameObjectsWithTag("Camera");
-            foreach(GameObject cam in Camera)
+            foreach (GameObject cam in Camera)
             {
-                 cam.SetActive(false);
+                cam.SetActive(false);
             }
-        
+        }
+        /*  Transform leftAnchor = transform.Find("LeftHandAnchor");
+          Transform rightAnchor = transform.Find("RightHandAnchor");
+
+          CartController cartcontroller = FindObjectOfType<CartController>();
+          if (cartcontroller != null) {
+              cartcontroller.leftHandAnchor = leftAnchor;
+              cartcontroller.rightHandAnchor = rightAnchor;
+              Debug.Log("수레에 손 앵커 등록 완료");
+          }
+*/
+
+
     }
 
     // Update is called once per frame
