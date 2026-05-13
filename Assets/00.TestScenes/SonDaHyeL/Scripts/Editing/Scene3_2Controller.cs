@@ -7,7 +7,7 @@ public class Scene3_2Controller : AllSceneController
 
     protected override IEnumerator RunSequence()
     {
-        yield break;
+        yield return StartCoroutine(soundManager.PlayAndWait("Scene3_2", 0.4f));
     }
 
 }
