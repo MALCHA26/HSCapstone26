@@ -227,7 +227,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2076878654}
   - {fileID: 1940133044}
   - {fileID: 1185495730}
   m_Father: {fileID: 1257834408}
@@ -414,11 +413,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8205262489536573498, guid: 8f65a91bc18df8642ad4d01039477d2f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.6
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8205262489536573498, guid: 8f65a91bc18df8642ad4d01039477d2f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8205262489536573498, guid: 8f65a91bc18df8642ad4d01039477d2f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -589,19 +588,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1628547358259445345, guid: b8b46077eb1bfea48b31254d100c0cec, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.00051
+      value: 0.0007
       objectReference: {fileID: 0}
     - target: {fileID: 1628547358259445345, guid: b8b46077eb1bfea48b31254d100c0cec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.0005
+      value: 0.0006862745
       objectReference: {fileID: 0}
     - target: {fileID: 1628547358259445345, guid: b8b46077eb1bfea48b31254d100c0cec, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.0005
+      value: 0.0006862745
       objectReference: {fileID: 0}
     - target: {fileID: 1628547358259445345, guid: b8b46077eb1bfea48b31254d100c0cec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.6
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 4193378537391689805, guid: b8b46077eb1bfea48b31254d100c0cec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1481,6 +1480,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2076878654}
   - {fileID: 1100966460}
   - {fileID: 195322056}
   - {fileID: 197925653}
@@ -1911,7 +1911,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::cshLobbyManager
   connectionInfoText: {fileID: 2113693268}
+  selectModeInfoText: {fileID: 0}
   joinButton: {fileID: 1155984214}
+  modeSelectButton: {fileID: 0}
   PlayerInfo: {fileID: 2141001719}
   playSceneName: Scene2-LightEffect
 --- !u!4 &1962975970
@@ -2091,11 +2093,11 @@ Transform:
   m_GameObject: {fileID: 2076878653}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 7.24758}
+  m_LocalPosition: {x: 0, y: 0, z: 6.24758}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 197925653}
+  m_Father: {fileID: 1257834408}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2076878655
 MonoBehaviour:

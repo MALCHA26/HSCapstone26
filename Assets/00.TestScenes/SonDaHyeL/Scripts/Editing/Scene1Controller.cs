@@ -27,6 +27,7 @@ public class Scene1Controller : AllSceneController
         // 1. 영상 재생
         bool videoDone = false;
         videoPlayer.onComplete = () => videoDone = true;
+        yield return new WaitForSeconds(2.5f);
         yield return StartCoroutine(soundManager.PlayAndWait("Scene1_1", 0.4f));
         yield return new WaitUntil(() => videoDone);
         yield return VideoFadeTransition();
