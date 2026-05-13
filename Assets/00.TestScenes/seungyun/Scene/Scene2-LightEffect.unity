@@ -6314,7 +6314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::cshGameManager
   MocapPlayerPrefab: {fileID: 5005560080281829913, guid: 4ef51e3a00049df4fb657ad1de267f30, type: 3}
-  VRPlayerPrefab: {fileID: 775826014480012716, guid: 9ba8d6d7adcfbee4e8400b2f33b56bb6, type: 3}
+  VRPlayerPrefab: {fileID: 2257672747004371765, guid: 9ba8d6d7adcfbee4e8400b2f33b56bb6, type: 3}
   SpawnPosPrefab: {fileID: 868136563}
   VRPosPrefab: {fileID: 658406787}
   PlayerInfo: {fileID: 0}
