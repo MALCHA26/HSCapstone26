@@ -3432,7 +3432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 339608a55a0c7ed47a032b9d39e4ee72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  scene3SpawnPos: {x: 0, y: 0, z: -0.57}
+  scene3SpawnPos: {x: 0, y: 1, z: -0.57}
 --- !u!4 &1174663092
 Transform:
   m_ObjectHideFlags: 0
