@@ -29,11 +29,11 @@ public class cshVRPlayer : MonoBehaviourPun
                 Debug.Log("수레에 손 앵커 등록 완료");
             }
 */
-            // GameObject[] Camera = GameObject.FindGameObjectsWithTag("Camera");
-            //foreach(GameObject cam in Camera)
-            // {
-            //     cam.SetActive(false);
-            // }
+            GameObject[] Camera = GameObject.FindGameObjectsWithTag("Camera");
+            foreach(GameObject cam in Camera)
+            {
+                 cam.SetActive(false);
+            }
         
     }
 
