@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 5284400871677814707}
   - component: {fileID: 3544376305979659723}
   - component: {fileID: 5349528564765950569}
+  - component: {fileID: 5106046450269665986}
   m_Layer: 0
   m_Name: VRPlayer
   m_TagString: Untagged
@@ -253,6 +254,18 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!114 &5106046450269665986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775826014480012716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21bf7d6cbd5dc374da13a570712fec18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::cshVRPlayer
 --- !u!1 &1194358276403225246
 GameObject:
   m_ObjectHideFlags: 0
