@@ -6,7 +6,6 @@ public class BlackoutManager : MonoBehaviour
     public AudioSource lightOffSound;
     public AudioSource tts1;
     public AudioSource tts2;
-    public AudioSource tts3;
 
     public List<Light> sceneLights = new List<Light>();
     public List<Renderer> emissionObjects = new List<Renderer>();
@@ -24,7 +23,7 @@ public class BlackoutManager : MonoBehaviour
                 tts1.Play();
             }
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             StartBlackOut();
             if (tts2 != null)
@@ -32,13 +31,9 @@ public class BlackoutManager : MonoBehaviour
                 tts2.Play();
             }
         }
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             StartLightOn();
-            if (tts3 != null)
-            {
-                tts3.Play();
-            }
         }
     }
     void StartBlackOut()
@@ -60,6 +55,8 @@ public class BlackoutManager : MonoBehaviour
     }
     void StartLightOn()
     {
+        if (lightOffSound != null) lightOffSound.Play();
+
         foreach (Light light in sceneLights)
         {
             if (light != null) light.enabled = true;

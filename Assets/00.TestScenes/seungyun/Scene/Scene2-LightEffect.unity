@@ -28195,7 +28195,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   providerAsset: {fileID: 11400000, guid: 3873d2d5076c95a408b7d097b6a8a730, type: 2}
-  deviceName: Headset Microphone (Oculus Virtual Audio Device)
+  deviceName: "\uBA38\uB9AC\uC5D0 \uAC70\uB294 \uC218\uD654\uAE30 (\u2606 - Find
+    My)"
   sampleRate: 16000
   channels: 1
   rmsWindowSeconds: 0.02
@@ -28573,7 +28574,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 90788b2539b5046419895ee88c715f90, type: 3}
+  m_Resource: {fileID: 8300000, guid: 0ea30a64dd8c5d74d9194782beaa2209, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
