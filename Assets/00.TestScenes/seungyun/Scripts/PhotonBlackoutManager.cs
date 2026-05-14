@@ -1,49 +1,36 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class BlackoutManager : MonoBehaviour
+public class PhotonBlackoutManager : MonoBehaviourPun
 {
     public AudioSource lightOffSound;
-    public AudioSource tts1;
-    public AudioSource tts2;
-    public AudioSource tts3;
-
+    public AudioSource ttsStart;
     public List<Light> sceneLights = new List<Light>();
     public List<Renderer> emissionObjects = new List<Renderer>();
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (!photonView.IsMine)
         {
-            StartBlackOut();
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            StartLightOn();
-            if (tts1 != null)
+            if (Input.GetKeyDown(KeyCode.L))
             {
-                tts1.Play();
+                photonView.RPC(nameof(SyncLightOut), RpcTarget.AllBuffered);
+            }
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                photonView.RPC(nameof(SyncLightOn), RpcTarget.AllBuffered);
             }
         }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            StartBlackOut();
-            if (tts2 != null)
-            {
-                tts2.Play();
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            StartLightOn();
-            if (tts3 != null)
-            {
-                tts3.Play();
-            }
-        }
+        
     }
-    void StartBlackOut()
+    [PunRPC]
+    void SyncLightOut()
     {
         if (lightOffSound != null) lightOffSound.Play();
+        if (ttsStart != null) 
+        {
+            ttsStart.Play();
+        }
         foreach (Light light in sceneLights)
         {
             if (light != null) light.enabled = false;
@@ -58,8 +45,11 @@ public class BlackoutManager : MonoBehaviour
         RenderSettings.ambientLight = Color.black;
         RenderSettings.reflectionIntensity = 0f;
     }
-    void StartLightOn()
+
+    [PunRPC]
+    void SyncLightOn()
     {
+        if (lightOffSound != null) lightOffSound.Play();
         foreach (Light light in sceneLights)
         {
             if (light != null) light.enabled = true;
@@ -68,12 +58,11 @@ public class BlackoutManager : MonoBehaviour
         {
             if (ren != null)
             {
-                ren.material.EnableKeyword("_EMISSION");
                 Color recoverColor = new Color(0.5f, 0.5f, 0.5f);
                 ren.material.SetColor("_EmissionColor", recoverColor);
             }
         }
-        RenderSettings.ambientLight = new Color(0.25f, 0.25f, 0.25f);
+        RenderSettings.ambientLight = new Color(0.5f, 0.5f, 0.5f);
         RenderSettings.reflectionIntensity = 1f;
     }
 
