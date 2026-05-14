@@ -229,7 +229,7 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &3817795153774982615
@@ -308,6 +308,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4751504876587449365, guid: 5b82dbb4e12c46446a4d01f1b2f794f2, type: 3}
+      propertyPath: instanceId
+      value: 0cd6ef3d-bd70-4433-9cf0-851a56170fb9
+      objectReference: {fileID: 0}
     - target: {fileID: 4807095771005490026, guid: 5b82dbb4e12c46446a4d01f1b2f794f2, type: 3}
       propertyPath: m_Name
       value: '[VR] Camera Rig'
@@ -340,9 +344,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 6584266873911985669, guid: 5b82dbb4e12c46446a4d01f1b2f794f2, type: 3}
+      propertyPath: instanceId
+      value: c8cec474-a096-4d0e-8101-c67baea047e4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7317244139029833337, guid: 5b82dbb4e12c46446a4d01f1b2f794f2, type: 3}
+      propertyPath: instanceId
+      value: e53cf2ad-87aa-4f3e-bc53-fb2dc01ffee1
+      objectReference: {fileID: 0}
     - target: {fileID: 8318902635570244731, guid: 5b82dbb4e12c46446a4d01f1b2f794f2, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541801182244186685, guid: 5b82dbb4e12c46446a4d01f1b2f794f2, type: 3}
+      propertyPath: instanceId
+      value: 9165eb0f-38d0-40f2-a1a0-81f1e5a42a5c
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
