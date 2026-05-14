@@ -14,8 +14,11 @@ public class Scene4Controller : AllSceneController
     [SerializeField] private Canvas uiCanvas;
     [SerializeField] private OpenAIRequester aiRequester;
 
+
     protected override IEnumerator RunSequence()
     {
+        aiRequester = GameObject.Find("aimanager").GetComponent<OpenAIRequester>();
+
         // 1. 영상 재생 + 나레이션 음원 재생
         bool videoDone = false;
         videoPlayer.onComplete = () => videoDone = true;
@@ -27,6 +30,7 @@ public class Scene4Controller : AllSceneController
         yield return VideoFadeTransition();
 
         // 2. AI 답변 수신 시 TTS + 버튼 제어 연결
+        /*
         if (aiRequester != null)
         {
             aiRequester.onAnswerReceived = (text) =>
@@ -34,6 +38,7 @@ public class Scene4Controller : AllSceneController
                 StartCoroutine(SpeakAndUnlock(text));
             };
         }
+        */
 
         // 3. Q&A 시작 (STT 활성화)
         if (uiCanvas != null)
