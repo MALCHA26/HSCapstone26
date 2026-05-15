@@ -2,6 +2,7 @@ using UnityEngine;
 using Meta.WitAi.Dictation;
 using UnityEngine.InputSystem;
 using Meta.WitAi.Events;
+using TMPro;
 
 public class VoiceListener : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class VoiceListener : MonoBehaviour
     [SerializeField] private DictationService dictationService;
     [SerializeField] private OpenAIRequester ai;
     public string Player_text;
+    public TextMeshProUGUI an_box;
     void Awake()
     {
         // 1. 이벤트 연결을 코드로 강제 수행 (이벤트 창 필요 없음)
@@ -36,13 +38,13 @@ public class VoiceListener : MonoBehaviour
     public void more()
     {
         // TTS 재생 중엔 버튼 무시
-        /*
+        
         if (ai != null && ai.isSpeaking)
         {
             Debug.Log("[VoiceListener] TTS 재생 중 - 버튼 무시");
             return;
         }
-        */
+        
 
         Player_text = "대기중";
         dictationService.Activate();
@@ -55,6 +57,7 @@ public class VoiceListener : MonoBehaviour
         Debug.Log("인식 결과: " + text);
         Player_text = text;
         TalkToNPC(text);
+        an_box.text = "이종일 선생님께서 생각중이십니다...";
     }
 
     void TalkToNPC(string playerText)

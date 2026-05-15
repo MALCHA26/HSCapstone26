@@ -1133,7 +1133,8 @@ MonoBehaviour:
   soundManager: {fileID: 1100966461}
   voiceListener: {fileID: 0}
   uiCanvas: {fileID: 59121705}
-  aiRequester: {fileID: 0}
+  aiRequester: {fileID: 703052480}
+  an_box: {fileID: 1404660332}
 --- !u!1 &1386762686
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,7 +1218,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1880669574}
+      - m_Target: {fileID: 1880669577}
         m_TargetAssemblyTypeName: VoiceListener, Assembly-CSharp
         m_MethodName: more
         m_Mode: 1
@@ -1946,8 +1947,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 703052480}
     - target: {fileID: 3091247386673948757, guid: 0075611894494f54a8ea22a868e2a55c, type: 3}
+      propertyPath: an_box
+      value: 
+      objectReference: {fileID: 1404660332}
+    - target: {fileID: 3091247386673948757, guid: 0075611894494f54a8ea22a868e2a55c, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5556683071334192343, guid: 0075611894494f54a8ea22a868e2a55c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2005,7 +2010,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1654689168321426597, guid: 0075611894494f54a8ea22a868e2a55c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1880669574}
+      addedObject: {fileID: 1880669577}
   m_SourcePrefab: {fileID: 100100000, guid: 0075611894494f54a8ea22a868e2a55c, type: 3}
 --- !u!1 &1880669570 stripped
 GameObject:
@@ -2023,7 +2028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6da0ed72f4541d7b52607891bafa6f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: VoiceSDK.Dictation.Runtime::Oculus.Voice.Dictation.AppDictationExperience
---- !u!114 &1880669574
+--- !u!114 &1880669577
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2038,6 +2043,7 @@ MonoBehaviour:
   dictationService: {fileID: 1880669571}
   ai: {fileID: 703052480}
   Player_text: 
+  an_box: {fileID: 1404660332}
 --- !u!1001 &1884659298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2049,6 +2055,10 @@ PrefabInstance:
     - target: {fileID: 364019671649262032, guid: 0912746c659958a418eadc49e673ec0a, type: 3}
       propertyPath: m_Name
       value: TTSManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219044883217792299, guid: 0912746c659958a418eadc49e673ec0a, type: 3}
+      propertyPath: Priority
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1337938941137087712, guid: 0912746c659958a418eadc49e673ec0a, type: 3}
       propertyPath: m_LocalPosition.x

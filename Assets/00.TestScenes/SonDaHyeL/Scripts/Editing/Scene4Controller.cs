@@ -6,6 +6,7 @@
 
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class Scene4Controller : AllSceneController
 {
@@ -14,6 +15,7 @@ public class Scene4Controller : AllSceneController
     [SerializeField] private Canvas uiCanvas;
     [SerializeField] private OpenAIRequester aiRequester;
 
+    public TextMeshProUGUI an_box;
 
     protected override IEnumerator RunSequence()
     {
@@ -30,7 +32,7 @@ public class Scene4Controller : AllSceneController
         yield return VideoFadeTransition();
 
         // 2. AI 답변 수신 시 TTS + 버튼 제어 연결
-        /*
+        
         if (aiRequester != null)
         {
             aiRequester.onAnswerReceived = (text) =>
@@ -38,7 +40,7 @@ public class Scene4Controller : AllSceneController
                 StartCoroutine(SpeakAndUnlock(text));
             };
         }
-        */
+        
 
         // 3. Q&A 시작 (STT 활성화)
         if (uiCanvas != null)
@@ -52,6 +54,7 @@ public class Scene4Controller : AllSceneController
         // TTS 재생 중 버튼 잠금
         if (aiRequester != null) aiRequester.isSpeaking = true;
 
+        an_box.text = aiRequester.answer;
         yield return Narrate(text);
 
         // TTS 완료 후 버튼 해제

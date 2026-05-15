@@ -19,6 +19,6 @@ public class UiManager : MonoBehaviour
     void Update()
     {
         re_box.text = Dictation.GetComponent<VoiceListener>().Player_text;
-        an_box.text = ai.answer;
+        //an_box.text = ai.answer;
     }
 }
