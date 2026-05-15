@@ -75,3 +75,9 @@ Assets/00.TestScenes/daylong3220/Script/Secrets.txt
 Assets/00.TestScenes/daylong3220/Script/Secrets.txt.meta
 
 
+Assets/MetaXR/SpeechToText_OpenAI_ProviderProfile.asset
+Assets/MetaXR/SpeechToText_OpenAI_ProviderProfile.asset.meta
+Assets/MetaXR/TextToSpeech_OpenAI_ProviderProfile.asset
+Assets/MetaXR/TextToSpeech_OpenAI_ProviderProfile.asset.meta
+Assets/MetaXR/TextToSpeech_OpenAI_ProviderProfile_Narration.asset
+Assets/MetaXR/TextToSpeech_OpenAI_ProviderProfile_Narration.asset.meta
