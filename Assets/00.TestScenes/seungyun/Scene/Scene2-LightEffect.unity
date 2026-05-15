@@ -354,7 +354,7 @@ Transform:
   m_GameObject: {fileID: 44096580}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.040000014, y: 0.10800004, z: 0.020000024}
+  m_LocalPosition: {x: -0.040000014, y: -0.53999996, z: 0.020000024}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6438,7 +6438,7 @@ Transform:
   m_GameObject: {fileID: 287182220}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.32500005, y: 1.7310998, z: -1.7206}
+  m_LocalPosition: {x: 0.5222275, y: 1.803575, z: -1.7206}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7791,6 +7791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spot Light
       objectReference: {fileID: 0}
+    - target: {fileID: 4840070265957860772, guid: 6ea9040e711e80c4a80bcb5bd4e7db3b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7277964467596471361, guid: 6ea9040e711e80c4a80bcb5bd4e7db3b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.001
@@ -7801,7 +7805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7277964467596471361, guid: 6ea9040e711e80c4a80bcb5bd4e7db3b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.7761
+      value: -1.8
       objectReference: {fileID: 0}
     - target: {fileID: 7277964467596471361, guid: 6ea9040e711e80c4a80bcb5bd4e7db3b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14796,7 +14800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &621114939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16331,7 +16335,7 @@ Light:
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
+  m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -46994,7 +46998,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7746111804539964344, guid: f4a79474227021e469ce2be20fe3a6c9, type: 3}
       propertyPath: m_Name
-      value: Spot Light (1)
+      value: 'Spot Light '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7746111804539964344, guid: f4a79474227021e469ce2be20fe3a6c9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021858943967210061, guid: f4a79474227021e469ce2be20fe3a6c9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8021858943967210061, guid: f4a79474227021e469ce2be20fe3a6c9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -47006,7 +47018,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8021858943967210061, guid: f4a79474227021e469ce2be20fe3a6c9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.754
+      value: -1.8
       objectReference: {fileID: 0}
     - target: {fileID: 8021858943967210061, guid: f4a79474227021e469ce2be20fe3a6c9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -67578,7 +67590,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &2025439586666181985
 BoxCollider:
@@ -67730,13 +67742,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272102658572406014}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00011005401, y: 0.079429515, z: -0.02083226}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7933523, w: 0.60876274}
+  m_LocalPosition: {x: 0.0003745556, y: 0.075, z: -0.02}
+  m_LocalScale: {x: 0.6, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8778348142556873697}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -105}
 --- !u!1 &2174811465494577184
 GameObject:
   m_ObjectHideFlags: 0
@@ -75137,7 +75149,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!23 &4577789600630054973
 MeshRenderer:
@@ -81115,13 +81127,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347179656229741208}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00011005401, y: 0.079429515, z: -0.02083226}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.9914446, w: 0.13052888}
+  m_LocalPosition: {x: -0.00011005401, y: 0.08, z: -0.02083226}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8778348142556873697}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 165}
 --- !u!1 &5402055266278355917
 GameObject:
   m_ObjectHideFlags: 0
@@ -81541,7 +81553,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &5818961396760649726
 GameObject:
@@ -82134,7 +82146,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!33 &6338075668028166286
 MeshFilter:
@@ -82561,7 +82573,7 @@ Transform:
   m_GameObject: {fileID: 6334872442222911825}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.99489987, y: 1.0269, z: -1.7155999}
+  m_LocalPosition: {x: 1.189, y: 1.102, z: -1.7155999}
   m_LocalScale: {x: 0.59014493, y: 0.53267264, z: 0.67448}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -84173,7 +84185,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &8420594225521155063
 GameObject:
@@ -85049,7 +85061,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &9051496033123804341
 MeshRenderer:
   m_ObjectHideFlags: 0
