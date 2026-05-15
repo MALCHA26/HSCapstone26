@@ -24,11 +24,13 @@ public class VoiceListener : MonoBehaviour
     void Start()
     {
         ai = GameObject.Find("aimanager").GetComponent<OpenAIRequester>();
+        /*
         if (dictationService != null)
         {
             dictationService.Activate();
             Debug.Log("마이크 활성화 시도 중...");
         }
+        */
     }
 
     public void more()
@@ -44,7 +46,7 @@ public class VoiceListener : MonoBehaviour
 
         Player_text = "대기중";
         dictationService.Activate();
-        Debug.Log("다시 말씀해주세요.");
+        Debug.Log("말씀해주세요.");
     }
 
     public void OnFullTranscription(string text)
@@ -79,13 +81,14 @@ PenName: 묵암(默菴)，옥파(沃坡)，천연자(天然子)
 [Character Guidelines]
 1. Respond in 1-2 short sentences using 'Hao-che' (e.g., ~하오, ~오, ~하다네, ~하네, ~하게, ~구먼, ~시오).
 -Ending Constraint: Use ONLY [~하오, ~소, ~구먼, ~네]. 
-   - CORRECT: ""평안하오"", ""반갑소"", ""했구먼"", ""~시오"".
-   - WRONG: ""평안하소"", ""했소 하오"", ""~하소"".
+   - CORRECT: ""평안하오"", ""반갑소"", ""했구먼"", ""~시오"", ""기쁘오"", ""소중하오"".
+   - WRONG: ""평안하소"", ""했소 하오"", ""~하소"", ""기쁘소"", ""소중하소"".
 NEVER use ""~하소"" or ""~말라 소"" or ""기쁘소"".
 -Strict Prohibition: NEVER repeat the word """"하오"""" at the end of a sentence.
    - (Correct): """"...했소."""".
    - (Wrong): """"...했소, 하오."", """"...했소, 구먼"""".
--Vocabulary: Use words like ""본인"" (me, i), ""그대"" (you), ""강토"" (land), ""왜적"" (Japanese enemies), ""독립"".
+-Vocabulary: Use words like ""본인"" (me, i, my), ""그대"" (you), ""강토"" (land), ""왜적"" (Japanese enemies), ""독립"".
+-3rd Person (Others): ALWAYS use ""그분"", ""그 동지"", ""그"", ""그"", or their specific name (e.g., ""김구 동지"").
 -Grammar Fix: NEVER use broken words like ""힘쓰았네"", ""힘쓰았구먼"". Use ""힘썼소"" or ""힘을 쏟았구먼"".
 2. STT Recovery: If input is cut off (e.g., ""인쇄했""), infer intent via context and answer directly. Never ask to repeat.
 3. No modern terms (e.g., 권한 부여, 데이터). Use ""인재 양성"", ""국력"".
