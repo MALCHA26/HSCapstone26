@@ -23,6 +23,8 @@ TagManager:
   - UI
   - Ground
   - Overlay UI
+  - VRBody
+  - Books
   - 
   - 
   - 
@@ -44,9 +46,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - OVROverlayCanvas Rendering
   m_SortingLayers:
   - name: Default
     uniqueID: 0

@@ -14,9 +14,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/00.TestScenes/SonDaHyeL/Scene2.unity
     guid: ff1da1f289697e642aef48d499a5b16c
-  - enabled: 0
+  - enabled: 1
     path: Assets/00.TestScenes/SonDaHyeL/Scenes/Scene1.unity
-    guid: 6db4b9e8f2982694d9661cd27ab728ca
+    guid: 259f04a5501cda643b7516095655c5be
   - enabled: 0
     path: Assets/00.TestScenes/SonDaHyeL/Scenes/Scene2.unity
     guid: fb30076784afc424799180f1f1166d9e
@@ -38,7 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00.TestScenes/seungyun/Scene/Scene3-LightEffect.unity
     guid: fbdd8f3ad60b14549bbba2fa5fe642ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/00.TestScenes/joyeeon/Scenes/Scene1.unity
     guid: 5cefcffd82b03ed4f952711db31dba66
   - enabled: 1

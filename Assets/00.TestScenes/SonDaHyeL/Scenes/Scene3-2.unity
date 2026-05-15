@@ -1971,6 +1971,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1240242594}
   m_LocalEulerAnglesHint: {x: -35.243, y: 0, z: 0}
+--- !u!1 &986767081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 986767083}
+  - component: {fileID: 986767082}
+  m_Layer: 0
+  m_Name: Scene3Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &986767082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986767081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 339608a55a0c7ed47a032b9d39e4ee72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scene3Manager
+  scene3SpawnPos: {x: 0, y: 1, z: 0}
+--- !u!4 &986767083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986767081}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.87019, y: 0, z: 0.71949}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &988844718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2508,7 +2553,8 @@ Transform:
   m_LocalPosition: {x: -0.10097, y: 0, z: 1.82102}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1966336090}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1209379278
@@ -2526,7 +2572,7 @@ MonoBehaviour:
   sceneFade: {fileID: 413811895}
   nextSceneName: Scene4
   videoPlayer: {fileID: 0}
-  soundManager: {fileID: 0}
+  soundManager: {fileID: 1966336089}
   paper: {fileID: 1232835849}
 --- !u!1001 &1232835841
 PrefabInstance:
@@ -2659,6 +2705,7 @@ MonoBehaviour:
   sceneController: {fileID: 1209379278}
   intoPrefab: {fileID: 2839769773220188738, guid: e4602d912ddf95945b7222b3b964ecf8, type: 3}
   intoSpawnPoint: {fileID: 1062053503}
+  scenename: Scene3-2
 --- !u!1 &1240242593
 GameObject:
   m_ObjectHideFlags: 0
@@ -4188,6 +4235,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 19417603321231862, guid: 428e6927a9ecf0546ae0baa2abc4db25, type: 3}
   m_PrefabInstance: {fileID: 1938332953}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1966336088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1966336090}
+  - component: {fileID: 1966336089}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1966336089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966336088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba16865846c54447aa23fef52da85fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundManager
+  sounds:
+  - name: Scene3_2
+    clip: {fileID: 8300000, guid: b06caaa6c1abfd149ad21ff2c8442b77, type: 3}
+--- !u!4 &1966336090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966336088}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1209379277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2010459418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4781,3 +4875,4 @@ SceneRoots:
   - {fileID: 1232835841}
   - {fileID: 475282245}
   - {fileID: 413811894}
+  - {fileID: 986767083}

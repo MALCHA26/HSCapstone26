@@ -94,7 +94,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: de8f7909ccca5344c8a98e255ccb4a67, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8000907349770935293, guid: de8f7909ccca5344c8a98e255ccb4a67, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -1338,6 +1338,9 @@ MonoBehaviour:
   MRUKInstance:
   - {fileID: 0}
   - {fileID: 0}
+  MocapSceneChanger: {fileID: 0}
+  targetScene: Scene3-LightEffect
+  VRplayer: {fileID: 0}
 --- !u!114 &-2574334749206752581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1372,8 +1375,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6226842a13d56fc4b9f6ffc41f7ef0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OptitrackSkeletonAnimator
-  StreamingClient: {fileID: 0}
-  SkeletonAssetName: Skeleton001
+  StreamingClient: {fileID: 4696391182782444935}
+  SkeletonAssetName: Skeleton 001
   DestinationAvatar: {fileID: 9000000, guid: de8f7909ccca5344c8a98e255ccb4a67, type: 3}
 --- !u!1 &1873310266317685892 stripped
 GameObject:
@@ -4633,6 +4636,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a32d482689653847b22155fb3096f79, type: 3}
+--- !u!114 &4696391182782444935 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3798361029752001700, guid: 9a32d482689653847b22155fb3096f79, type: 3}
+  m_PrefabInstance: {fileID: 8474248233009815843}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a331805347588fe4a8161c8875d24396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7218744662721481123 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1275840138454952064, guid: 9a32d482689653847b22155fb3096f79, type: 3}

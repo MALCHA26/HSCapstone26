@@ -4,23 +4,41 @@ using UnityEngine;
 public class BlackoutManager : MonoBehaviour
 {
     public AudioSource lightOffSound;
+    public AudioSource tts1;
+    public AudioSource tts2;
+
     public List<Light> sceneLights = new List<Light>();
     public List<Renderer> emissionObjects = new List<Renderer>();
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            lightOffSound.Play();
-            StartBlackout();
+            StartBlackOut();
         }
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            lightOffSound.Play();
+            StartLightOn();
+            if (tts1 != null)
+            {
+                tts1.Play();
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            StartBlackOut();
+            if (tts2 != null)
+            {
+                tts2.Play();
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
             StartLightOn();
         }
     }
-    void StartBlackout()
+    void StartBlackOut()
     {
+        if (lightOffSound != null) lightOffSound.Play();
         foreach (Light light in sceneLights)
         {
             if (light != null) light.enabled = false;
@@ -30,7 +48,6 @@ public class BlackoutManager : MonoBehaviour
             if (ren != null)
             {
                 ren.material.SetColor("_EmissionColor", Color.black);
-                ren.material.DisableKeyword("_EMISSION");
             }
         }
         RenderSettings.ambientLight = Color.black;
@@ -38,6 +55,8 @@ public class BlackoutManager : MonoBehaviour
     }
     void StartLightOn()
     {
+        if (lightOffSound != null) lightOffSound.Play();
+
         foreach (Light light in sceneLights)
         {
             if (light != null) light.enabled = true;

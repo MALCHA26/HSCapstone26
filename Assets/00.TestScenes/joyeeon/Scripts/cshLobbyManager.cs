@@ -10,7 +10,9 @@ public class cshLobbyManager : MonoBehaviourPunCallbacks // PUN 구현할때 overrid
     private string gameVersion = "1"; // 같은 버전끼리 매칭하기 위해 string 사용 숫자뿐만 아닌 다른 것도 사용 가능
 
     public TextMeshProUGUI connectionInfoText;
+    public TextMeshProUGUI selectModeInfoText;
     public Button joinButton;
+    public Button modeSelectButton;
     public GameObject PlayerInfo;
     public string playSceneName = "MocapTestScene";
     private void Start()
@@ -83,5 +85,18 @@ public class cshLobbyManager : MonoBehaviourPunCallbacks // PUN 구현할때 overrid
         //base.OnJoinedRoom();
     }
 
+    public void SelectModeToggleBtn()
+    {
+        if (PlayerInfo.GetComponent<cshPlayerInfo>().playerInfo == 1)
+        {
+            PlayerInfo.GetComponent<cshPlayerInfo>().playerInfo = 2;
+            selectModeInfoText.text = "VR Mode";
+        }
+        else
+        {
+            PlayerInfo.GetComponent<cshPlayerInfo>().playerInfo = 1;
+            selectModeInfoText.text = "Mocap Mode";
+        }
+    }
 }
 
