@@ -7,6 +7,7 @@
 using Photon.Realtime;
 using System.Collections;
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public class CartController : MonoBehaviour
 {
@@ -22,11 +23,12 @@ public class CartController : MonoBehaviour
     private bool isGrabbed = false; // 잡고 있는지 여부
     private Vector3 grabOffset; // 손과 수레 사이 거리 
     private Transform activeController; // 잡고 있는 컨트롤러
-
+    public GameObject butterflies;
+    public ParticleSystem myParticle;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
+        butterflies.SetActive(false);
         StartCoroutine(FindMyHandsRoutine());
     }
 
@@ -101,6 +103,8 @@ public class CartController : MonoBehaviour
         if (distL <= grabDistance || distR <= grabDistance)
         {
             isGrabbed = true;
+            butterflies.SetActive(false);
+            myParticle.Play();
             activeController = hand;
 
             // 수레 위치 계산
