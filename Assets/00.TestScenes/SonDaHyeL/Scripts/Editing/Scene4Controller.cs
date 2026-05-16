@@ -40,11 +40,18 @@ public class Scene4Controller : AllSceneController
                 StartCoroutine(SpeakAndUnlock(text));
             };
         }
-        
+
 
         // 3. Q&A 시작 (STT 활성화)
         if (uiCanvas != null)
+        {
             uiCanvas.gameObject.SetActive(true);
+            UIChangeManager uiManager = uiCanvas.GetComponent<UIChangeManager>();
+            if (uiManager != null)
+            {
+                uiManager.ShowQuestionUI();
+            }
+        }
         if (voiceListener != null)
             voiceListener.gameObject.SetActive(true);
     }

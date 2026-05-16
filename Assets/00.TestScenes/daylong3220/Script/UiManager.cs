@@ -15,10 +15,12 @@ public class UiManager : MonoBehaviour
         ai = GameObject.Find("aimanager").GetComponent<OpenAIRequester>();
     }
 
+    /*
     // Update is called once per frame
     void Update()
     {
         re_box.text = Dictation.GetComponent<VoiceListener>().Player_text;
         //an_box.text = ai.answer;
     }
+    */
 }
