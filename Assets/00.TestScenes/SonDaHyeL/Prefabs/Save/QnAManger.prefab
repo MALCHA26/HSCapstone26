@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: af49bc82-4174-46e0-b1e4-40f1c05b4908
-  instanceId: 3f163bf9-75b5-4efa-b351-32a2317ff1f9
+  instanceId: e107e4b2-ef47-45dd-90e7-523ddf16e3d3
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -466,6 +466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VoiceListener
   dictationService: {fileID: 7011895499452525135}
+  ai: {fileID: 0}
   Player_text: 
 --- !u!1 &2329574710454996172
 GameObject:
@@ -1364,7 +1365,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8432044982385059088}
-  - component: {fileID: 4198833899298168311}
+  - component: {fileID: 7454674874628961156}
   m_Layer: 0
   m_Name: aimanager
   m_TagString: Untagged
@@ -1387,7 +1388,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5556683071334192343}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4198833899298168311
+--- !u!114 &7454674874628961156
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1400,3 +1401,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OpenAIRequester
   answer: 
+  isSpeaking: 0

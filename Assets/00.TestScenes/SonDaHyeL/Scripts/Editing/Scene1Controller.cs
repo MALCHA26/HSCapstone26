@@ -17,9 +17,12 @@ public class Scene1Controller : AllSceneController
     [SerializeField] private ObjectSpawn printerSpawner;
     [SerializeField] protected Paper paper;
 
+    [SerializeField] private GameObject LEE;
 
     [Header("캔버스 제어")]
     [SerializeField] private GameObject videoCanvas;
+    [SerializeField] private UIManager uiManagerPrinter;
+    [SerializeField] private UIManager uiManagerPaper;
 
     protected override IEnumerator RunSequence()
     {
@@ -41,12 +44,21 @@ public class Scene1Controller : AllSceneController
         paperDrop.Drop();
         soundManager.Play("PaperFall", 0.5f);
         yield return new WaitUntil(() => dropDone);
-     
+
+        //희연 추가 : 종이 잡기 안내 UI 띄우기
+        uiManagerPrinter.ShowGuide("1Scenegrab");
+
         // 3. 종이 잡기 대기
         bool grabbed = false;
         paper.onGrabbed = () => grabbed = true;
         yield return new WaitUntil(() => grabbed);
-        
+
+
+        //희연 추가 : 종이 잡기 안내 UI 숨기기
+        uiManagerPrinter.HideGuide();
+        LEE.SetActive(true);
+
+
         // 4. 스크린 연출
         yield return StartCoroutine(textureChange.PlaySequence());
 
@@ -54,6 +66,7 @@ public class Scene1Controller : AllSceneController
         yield return StartCoroutine(mapEffect.PlaySequence());
 
         // 6. 인쇄기 스폰
+        uiManagerPaper.ShowGuide("1Sceneprint");
         soundManager.Play("Typing", 0.1f);
         yield return StartCoroutine(soundManager.PlayAndWait("Scene1_3", 0.4f));
         printerSpawner.Spawn();
