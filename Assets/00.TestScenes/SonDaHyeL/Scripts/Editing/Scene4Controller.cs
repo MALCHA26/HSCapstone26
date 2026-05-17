@@ -15,6 +15,11 @@ public class Scene4Controller : AllSceneController
     [SerializeField] private Canvas uiCanvas;
     [SerializeField] private OpenAIRequester aiRequester;
 
+    [Header("캔버스 제어")]
+    [SerializeField] private GameObject videoCanvas;
+    [SerializeField] private GameObject QACanvas;
+
+
     public TextMeshProUGUI an_box;
 
     protected override IEnumerator RunSequence()
@@ -31,8 +36,11 @@ public class Scene4Controller : AllSceneController
         yield return new WaitUntil(() => videoDone);
         yield return VideoFadeTransition();
 
+        videoCanvas.SetActive(false);
+        QACanvas.SetActive(true);
+
         // 2. AI 답변 수신 시 TTS + 버튼 제어 연결
-        
+
         if (aiRequester != null)
         {
             aiRequester.onAnswerReceived = (text) =>
