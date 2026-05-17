@@ -17,6 +17,7 @@ public class Scene1Controller : AllSceneController
     [SerializeField] private ObjectSpawn printerSpawner;
     [SerializeField] protected Paper paper;
 
+    [SerializeField] private GameObject LEE;
 
     [Header("캔버스 제어")]
     [SerializeField] private GameObject videoCanvas;
@@ -52,8 +53,11 @@ public class Scene1Controller : AllSceneController
         paper.onGrabbed = () => grabbed = true;
         yield return new WaitUntil(() => grabbed);
 
+
         //희연 추가 : 종이 잡기 안내 UI 숨기기
         uiManagerPrinter.HideGuide();
+        LEE.SetActive(true);
+
 
         // 4. 스크린 연출
         yield return StartCoroutine(textureChange.PlaySequence());
