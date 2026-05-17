@@ -24,7 +24,9 @@ public class CartController : MonoBehaviour
     private Vector3 grabOffset; // 손과 수레 사이 거리 
     private Transform activeController; // 잡고 있는 컨트롤러
     public GameObject butterflies;
-    public ParticleSystem myParticle;
+    public GameObject cartGrabPos;
+    public AudioSource cartSound;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -40,14 +42,12 @@ public class CartController : MonoBehaviour
         {
             // 씬에 있는 모든 VR 플레이어를 찾음
             GameObject playerObj = GameObject.Find("VRPlayer(Clone)");
-            if(playerObj != null)
+            if (playerObj != null)
             {
                 cshVRPlayer player = playerObj.GetComponent<cshVRPlayer>();
                 leftHandAnchor = player.transform.Find("[VR] Camera Rig/TrackingSpace/LeftHandAnchor");
                 rightHandAnchor = player.transform.Find("[VR] Camera Rig/TrackingSpace/RightHandAnchor");
             }
-
-           
 
             // 아직 내 캐릭터가 씬에 로드되지 않았다면 0.5초 대기 후 다시 시도
             yield return new WaitForSeconds(0.5f);
@@ -103,8 +103,10 @@ public class CartController : MonoBehaviour
         if (distL <= grabDistance || distR <= grabDistance)
         {
             isGrabbed = true;
-            butterflies.SetActive(false);
-            myParticle.Play();
+            cartGrabPos.SetActive(false);
+            butterflies.SetActive(true);
+
+            cartSound.Play();
             activeController = hand;
 
             // 수레 위치 계산

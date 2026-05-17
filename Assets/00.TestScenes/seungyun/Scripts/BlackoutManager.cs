@@ -9,6 +9,8 @@ public class BlackoutManager : MonoBehaviour
 
     public List<Light> sceneLights = new List<Light>();
     public List<Renderer> emissionObjects = new List<Renderer>();
+
+    public GameObject grabPos;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
@@ -34,6 +36,7 @@ public class BlackoutManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             StartLightOn();
+            grabPos.SetActive(true);
         }
     }
     void StartBlackOut()
