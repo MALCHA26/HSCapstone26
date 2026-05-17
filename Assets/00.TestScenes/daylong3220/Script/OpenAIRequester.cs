@@ -15,7 +15,7 @@ public class OpenAIRequester : MonoBehaviour
 
     void Awake()
     {
-        answer = "대기중..";
+        answer = "어서오시오 그대, 본인은 계몽의 언론인 이종일이라 하오.";
         //api key 불러오기
         string directoryPath = System.IO.Path.Combine(Application.dataPath, "00.TestScenes", "daylong3220", "script");
         string filePath = System.IO.Path.Combine(directoryPath, "Secrets.txt");
