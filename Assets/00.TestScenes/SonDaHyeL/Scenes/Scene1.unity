@@ -985,24 +985,6 @@ MonoBehaviour:
     _installationVariants:
     - _memberName: mode
       _value: '{"value__":0}'
---- !u!1 &807968533 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4589385353133882387, guid: 859fccb39be98404abcf87191d157084, type: 3}
-  m_PrefabInstance: {fileID: 3946168533511436878}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &807968539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 807968533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0a3ee3d7324e914aa015294e4a84c7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIManager
-  uidata: {fileID: 11400000, guid: 849513cc5964c7240af9b380bde64c05, type: 2}
 --- !u!1 &1036390187
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,7 +1521,8 @@ MonoBehaviour:
   printerSpawner: {fileID: 2076878655}
   paper: {fileID: 489283014}
   videoCanvas: {fileID: 1405470532}
-  uiManager: {fileID: 807968539}
+  uiManagerPrinter: {fileID: 0}
+  uiManagerPaper: {fileID: 0}
 --- !u!1 &1405470532 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6890631794280876751, guid: b8b46077eb1bfea48b31254d100c0cec, type: 3}
@@ -2599,18 +2582,6 @@ PrefabInstance:
       value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 1504081269745000109, guid: 859fccb39be98404abcf87191d157084, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.002
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504081269745000109, guid: 859fccb39be98404abcf87191d157084, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.002
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504081269745000109, guid: 859fccb39be98404abcf87191d157084, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.002
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504081269745000109, guid: 859fccb39be98404abcf87191d157084, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2669,10 +2640,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4589385353133882387, guid: 859fccb39be98404abcf87191d157084, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 807968539}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 859fccb39be98404abcf87191d157084, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
