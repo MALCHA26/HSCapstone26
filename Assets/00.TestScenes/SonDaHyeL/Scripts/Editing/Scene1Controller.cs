@@ -52,11 +52,11 @@ public class Scene1Controller : AllSceneController
         bool grabbed = false;
         paper.onGrabbed = () => grabbed = true;
         yield return new WaitUntil(() => grabbed);
+        LEE.SetActive(true);
 
 
         //희연 추가 : 종이 잡기 안내 UI 숨기기
         uiManagerPrinter.HideGuide();
-        LEE.SetActive(true);
 
 
         // 4. 스크린 연출
