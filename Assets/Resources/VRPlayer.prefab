@@ -289,6 +289,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5952777189099681496, guid: 5b82dbb4e12c46446a4d01f1b2f794f2, type: 3}
+      propertyPath: fadeOnStart
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6419103088960808475, guid: 5b82dbb4e12c46446a4d01f1b2f794f2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
