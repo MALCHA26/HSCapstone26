@@ -1014,7 +1014,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1036390188
 Transform:
   m_ObjectHideFlags: 0
@@ -1523,7 +1523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneController
   sceneFade: {fileID: 1722140898}
-  nextSceneName: Scene2
+  nextSceneName: Scene2-LightEffect
   videoPlayer: {fileID: 1201271680}
   soundManager: {fileID: 1100966461}
   paperDrop: {fileID: 489283015}
