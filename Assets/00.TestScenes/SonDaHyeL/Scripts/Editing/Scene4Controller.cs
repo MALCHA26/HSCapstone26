@@ -30,14 +30,14 @@ public class Scene4Controller : AllSceneController
         bool videoDone = false;
         videoPlayer.onComplete = () => videoDone = true;
 
-        yield return new WaitForSeconds(2.5f);
-        yield return StartCoroutine(soundManager.PlayAndWait("Scene4Narration", 0.2f));
+        //yield return new WaitForSeconds(2.5f);
+        //yield return StartCoroutine(soundManager.PlayAndWait("Scene4Narration", 0.2f));
 
         yield return new WaitUntil(() => videoDone);
         yield return VideoFadeTransition();
 
         videoCanvas.SetActive(false);
-        QACanvas.SetActive(true);
+        //QACanvas.SetActive(true);
 
         // 2. AI 답변 수신 시 TTS + 버튼 제어 연결
 

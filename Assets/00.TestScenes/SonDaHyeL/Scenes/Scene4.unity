@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &59121702
 RectTransform:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.012352, y: -0.027}
+  m_AnchoredPosition: {x: 0.012352, y: -0.113}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &59121703
@@ -953,7 +953,7 @@ PrefabInstance:
     - target: {fileID: 4537453798541415844, guid: db39871b61cae9a45975719ca98c7ec0, type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: d373c4c8e735f57438b074d6c61da1c6, type: 3}
+      objectReference: {fileID: 32900000, guid: ad2fd6ee36b70834885795ba84598776, type: 3}
     - target: {fileID: 4714355957185052066, guid: db39871b61cae9a45975719ca98c7ec0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1032,7 +1032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714355957185052066, guid: db39871b61cae9a45975719ca98c7ec0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.027
+      value: -0.369
       objectReference: {fileID: 0}
     - target: {fileID: 4714355957185052066, guid: db39871b61cae9a45975719ca98c7ec0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1179,7 +1179,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0587a7a1dd081b645aa59917695ed09a, type: 2}
+  - {fileID: 2100000, guid: 0447ca0fba07936439d85d90c25edf24, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2563,7 +2563,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0587a7a1dd081b645aa59917695ed09a, type: 2}
+  - {fileID: 2100000, guid: 0447ca0fba07936439d85d90c25edf24, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
