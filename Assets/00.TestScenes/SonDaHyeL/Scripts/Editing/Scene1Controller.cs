@@ -45,18 +45,19 @@ public class Scene1Controller : AllSceneController
         soundManager.Play("PaperFall", 0.5f);
         yield return new WaitUntil(() => dropDone);
 
-        //희연 추가 : 종이 잡기 안내 UI 띄우기
-        uiManagerPrinter.ShowGuide("1Scenegrab");
+        
 
         // 3. 종이 잡기 대기
         bool grabbed = false;
+        //희연 추가 : 종이 잡기 안내 UI 띄우기
+        uiManagerPaper.ShowGuide("1Scenegrab");
         paper.onGrabbed = () => grabbed = true;
         yield return new WaitUntil(() => grabbed);
         LEE.SetActive(true);
 
 
         //희연 추가 : 종이 잡기 안내 UI 숨기기
-        uiManagerPrinter.HideGuide();
+        uiManagerPaper.HideGuide();
 
         
         // 4. 스크린 연출
@@ -66,11 +67,11 @@ public class Scene1Controller : AllSceneController
         yield return StartCoroutine(mapEffect.PlaySequence());
         
         // 6. 인쇄기 스폰
-        uiManagerPaper.ShowGuide("1Sceneprint");
+        
         soundManager.Play("Typing", 0.1f);
         yield return StartCoroutine(soundManager.PlayAndWait("Scene1_3", 0.4f));
         printerSpawner.Spawn();
-
+        uiManagerPrinter.ShowGuide("1Sceneprint");
     }
 
     // 씬 전환
