@@ -37,7 +37,7 @@ public class Scene4Controller : AllSceneController
         yield return VideoFadeTransition();
 
         videoCanvas.SetActive(false);
-        //QACanvas.SetActive(true);
+        QACanvas.SetActive(true);
 
         // 2. AI 답변 수신 시 TTS + 버튼 제어 연결
 
