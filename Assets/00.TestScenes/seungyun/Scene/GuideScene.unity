@@ -978,7 +978,7 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1304690876}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -988,7 +988,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
   _whenUnselect:
     m_PersistentCalls:
@@ -1032,7 +1032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.6479
+      value: 1.643
       objectReference: {fileID: 0}
     - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1083,6 +1083,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+--- !u!1 &669633805 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5517272934073045610, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+  m_PrefabInstance: {fileID: 669633804}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &672925100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,6 +1409,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7788079380469775813, guid: 089cf224d9318cc42a130d3a6daaff2c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 935468230}
+    - targetCorrespondingSourceObject: {fileID: 7788079380469775813, guid: 089cf224d9318cc42a130d3a6daaff2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 935468233}
   m_SourcePrefab: {fileID: 100100000, guid: 089cf224d9318cc42a130d3a6daaff2c, type: 3}
 --- !u!1 &935468228 stripped
 GameObject:
@@ -1486,6 +1494,58 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &935468233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935468228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf00a93483fd1b4ba357bf6f764d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.InteractorUnityEventWrapper
+  _interactorView: {fileID: 1559271177}
+  _whenEnabled:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenDisabled:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenHover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnhover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 669633805}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _whenUnselect:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenPreprocessed:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenProcessed:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenPostprocessed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1026300643
 GameObject:
   m_ObjectHideFlags: 0
@@ -2094,6 +2154,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+--- !u!1 &1304690876 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5517272934073045610, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+  m_PrefabInstance: {fileID: 1304690875}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1492166643
 GameObject:
   m_ObjectHideFlags: 0

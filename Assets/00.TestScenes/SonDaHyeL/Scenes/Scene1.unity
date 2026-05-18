@@ -1697,10 +1697,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2003191386}
-  - {fileID: 2141001721}
-  - {fileID: 1962975970}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1884659298
@@ -2037,7 +2034,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1828839396}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1989771330
 GameObject:
@@ -2158,7 +2155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1504081269745000109, guid: 859fccb39be98404abcf87191d157084, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.992
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1504081269745000109, guid: 859fccb39be98404abcf87191d157084, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2313,7 +2310,7 @@ RectTransform:
   m_Children:
   - {fileID: 1155984213}
   - {fileID: 2113693267}
-  m_Father: {fileID: 1828839396}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2551,7 +2548,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1828839396}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1561150700781681452
 PrefabInstance:
@@ -2720,7 +2717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1504081269745000109, guid: 859fccb39be98404abcf87191d157084, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 4.039
+      value: 2.047
       objectReference: {fileID: 0}
     - target: {fileID: 1504081269745000109, guid: 859fccb39be98404abcf87191d157084, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2760,3 +2757,6 @@ SceneRoots:
   - {fileID: 3946168533511436878}
   - {fileID: 1991906148}
   - {fileID: 1933331562}
+  - {fileID: 2003191386}
+  - {fileID: 2141001721}
+  - {fileID: 1962975970}
