@@ -45,6 +45,7 @@ public class Scene3Changer : MonoBehaviour
             if (photonView != null && photonView.IsMine)
             {
                 PhotonNetwork.Destroy(player);
+                PhotonNetwork.LeaveRoom();
             }
         }
     }
