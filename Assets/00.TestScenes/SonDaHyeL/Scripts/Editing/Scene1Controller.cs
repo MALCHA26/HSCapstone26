@@ -26,14 +26,14 @@ public class Scene1Controller : AllSceneController
 
     protected override IEnumerator RunSequence()
     {
-        
+        /*
         // 1. 영상 재생
         bool videoDone = false;
         videoPlayer.onComplete = () => videoDone = true;
         yield return new WaitForSeconds(2.5f);
         yield return new WaitUntil(() => videoDone);
         yield return VideoFadeTransition();
-
+        */
         //비디오 캔버스 비활성화
         videoCanvas.SetActive(false);
         yield return StartCoroutine(soundManager.PlayAndWait("Scene1_2", 0.4f));
@@ -58,13 +58,13 @@ public class Scene1Controller : AllSceneController
         //희연 추가 : 종이 잡기 안내 UI 숨기기
         uiManagerPrinter.HideGuide();
 
-
+        /*
         // 4. 스크린 연출
         yield return StartCoroutine(textureChange.PlaySequence());
 
         // 5. 지도 연출
         yield return StartCoroutine(mapEffect.PlaySequence());
-
+        */
         // 6. 인쇄기 스폰
         uiManagerPaper.ShowGuide("1Sceneprint");
         soundManager.Play("Typing", 0.1f);
