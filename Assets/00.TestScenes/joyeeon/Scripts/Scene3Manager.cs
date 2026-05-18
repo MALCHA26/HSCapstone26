@@ -12,6 +12,8 @@ public class Scene3Manager : MonoBehaviour
         if (playerObj != null && scene3SpawnPoint != null)
         { 
             playerObj.transform.position = scene3SpawnPoint.position;
+            playerObj.transform.rotation = scene3SpawnPoint.rotation;
+
         }
         else
         {

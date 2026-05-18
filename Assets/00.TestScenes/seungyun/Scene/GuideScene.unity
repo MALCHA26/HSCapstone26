@@ -1002,6 +1002,87 @@ MonoBehaviour:
   _whenPostprocessed:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &669633804
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.012671895
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.014683025
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.2697
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1223
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.6479
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9212735
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.27431273
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.26248732
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.08430981
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -27.463
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -396.669
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 19.717
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517272934073045610, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_Name
+      value: MetaQuestTouchPlus_Right_MALCHA
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881496394618075873, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 53.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881496394618075873, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881496394618075873, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 200.4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
 --- !u!1 &672925100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,8 +1657,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.11309059, y: 0.085862204, z: 0.09642297}
-  m_Center: {x: -0.014903344, y: -0.0017332062, z: -0.0011452772}
+  m_Size: {x: 0.11309059, y: 0.08051698, z: 0.09642297}
+  m_Center: {x: -0.014903344, y: 0.00093940645, z: -0.0011452774}
 --- !u!54 &1028394853
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1932,6 +2013,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1304690875
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.012671895
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.014683025
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.4965
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0597
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.586
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.8471267
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.25096336
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.44723687
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.13918684
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -17.499
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -420.199
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177620239394621648, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 28.858
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517272934073045610, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_Name
+      value: MetaQuestTouchPlus_Right_Cup
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881496394618075873, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 53.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881496394618075873, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881496394618075873, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 200.4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: acc0abf7cd81e094abaecdf4a745aab0, type: 3}
 --- !u!1 &1492166643
 GameObject:
   m_ObjectHideFlags: 0
@@ -3105,3 +3267,5 @@ SceneRoots:
   - {fileID: 1998494420}
   - {fileID: 200228880}
   - {fileID: 812255000}
+  - {fileID: 669633804}
+  - {fileID: 1304690875}
