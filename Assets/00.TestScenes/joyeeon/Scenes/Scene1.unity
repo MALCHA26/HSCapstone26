@@ -748,7 +748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714355957185052066, guid: db39871b61cae9a45975719ca98c7ec0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.411
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4714355957185052066, guid: db39871b61cae9a45975719ca98c7ec0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -808,7 +808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6066404485744152763, guid: db39871b61cae9a45975719ca98c7ec0, type: 3}
       propertyPath: curveRadius
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6066404485744152763, guid: db39871b61cae9a45975719ca98c7ec0, type: 3}
       propertyPath: overlapMask
@@ -1701,7 +1701,10 @@ MonoBehaviour:
   mapEffect: {fileID: 1940133046}
   printerSpawner: {fileID: 2076878655}
   paper: {fileID: 489283014}
+  LEE: {fileID: 0}
   videoCanvas: {fileID: 620551079}
+  uiManagerPrinter: {fileID: 0}
+  uiManagerPaper: {fileID: 0}
 --- !u!114 &1744564682 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7535184656440844035, guid: db39871b61cae9a45975719ca98c7ec0, type: 3}
@@ -2033,7 +2036,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::cshLobbyManager
   connectionInfoText: {fileID: 2113693268}
+  selectModeInfoText: {fileID: 0}
   joinButton: {fileID: 1155984214}
+  modeSelectButton: {fileID: 0}
   PlayerInfo: {fileID: 2141001719}
   playSceneName: Scene2-LightEffect
 --- !u!4 &1962975970

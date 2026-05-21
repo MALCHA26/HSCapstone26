@@ -611,7 +611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1628547358259445345, guid: b8b46077eb1bfea48b31254d100c0cec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.153
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1628547358259445345, guid: b8b46077eb1bfea48b31254d100c0cec, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -659,6 +659,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4193378537391689805, guid: b8b46077eb1bfea48b31254d100c0cec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218649730628799565, guid: b8b46077eb1bfea48b31254d100c0cec, type: 3}
+      propertyPath: fadeColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218649730628799565, guid: b8b46077eb1bfea48b31254d100c0cec, type: 3}
+      propertyPath: fadeColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218649730628799565, guid: b8b46077eb1bfea48b31254d100c0cec, type: 3}
+      propertyPath: fadeColor.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7569782149750478439, guid: b8b46077eb1bfea48b31254d100c0cec, type: 3}
