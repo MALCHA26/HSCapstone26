@@ -12,15 +12,18 @@ public class Scene4Controller : AllSceneController
 {
     [Header("Scene4 Components")]
     [SerializeField] private VoiceListener voiceListener;
-    [SerializeField] private Canvas uiCanvas;
+    //[SerializeField] private Canvas uiCanvas;
     [SerializeField] private OpenAIRequester aiRequester;
 
     [Header("캔버스 제어")]
     [SerializeField] private GameObject videoCanvas;
-    [SerializeField] private GameObject QACanvas;
+    //[SerializeField] private GameObject QACanvas;
+
+    [SerializeField] private GameObject answer_box;
+    [SerializeField] private TextMeshPro answer_block;
 
 
-    public TextMeshProUGUI an_box;
+    //public TextMeshProUGUI an_box;
 
     protected override IEnumerator RunSequence()
     {
@@ -37,7 +40,9 @@ public class Scene4Controller : AllSceneController
         yield return VideoFadeTransition();
 
         videoCanvas.SetActive(false);
-        QACanvas.SetActive(true);
+        answer_box.SetActive(true);
+        answer_block.gameObject.SetActive(true);
+        //QACanvas.SetActive(true);
 
         // 2. AI 답변 수신 시 TTS + 버튼 제어 연결
 
@@ -49,7 +54,7 @@ public class Scene4Controller : AllSceneController
             };
         }
 
-
+        /*
         // 3. Q&A 시작 (STT 활성화)
         if (uiCanvas != null)
         {
@@ -60,6 +65,7 @@ public class Scene4Controller : AllSceneController
                 uiManager.ShowQuestionUI();
             }
         }
+        */
         if (voiceListener != null)
             voiceListener.gameObject.SetActive(true);
     }
@@ -69,7 +75,7 @@ public class Scene4Controller : AllSceneController
         // TTS 재생 중 버튼 잠금
         if (aiRequester != null) aiRequester.isSpeaking = true;
 
-        an_box.text = aiRequester.answer;
+        answer_block.text = aiRequester.answer;
         yield return Narrate(text);
 
         // TTS 완료 후 버튼 해제

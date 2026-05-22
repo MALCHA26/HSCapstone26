@@ -24,7 +24,7 @@ MonoBehaviour:
   sttResponseFormat: text
   sttLanguage: ko
   sttTemperature: 0
-  ttsVoice: ash
+  ttsVoice: fable
   ttsOutputFormat: mp3
   ttsSpeed: 1
   ttsInstructions: 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Text;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -12,6 +13,8 @@ public class OpenAIRequester : MonoBehaviour
     public System.Action<string> onAnswerReceived; // 답변 수신 시 외부 콜백
 
     private OpenAIRequest requestData;
+
+    [SerializeField] private TextMeshPro answer_block;
 
     void Awake()
     {
@@ -90,7 +93,7 @@ public class OpenAIRequester : MonoBehaviour
         {
             Debug.Log("OpenAI 대답: " + response.text);
             answer = response.text;
-
+            answer_block.text = answer;
             // 답변 텍스트를 외부(Scene4Controller)로 전달
             onAnswerReceived?.Invoke(response.text);
         }
