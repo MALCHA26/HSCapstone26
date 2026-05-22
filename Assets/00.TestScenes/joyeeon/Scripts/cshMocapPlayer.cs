@@ -4,13 +4,13 @@ using Photon.Pun;
 public class cshMocapPlayer : MonoBehaviourPun
 {
     public GameObject[] MRUKInstance;
-    public MocapSceneChanger MocapSceneChanger;
+    //public MocapSceneChanger MocapSceneChanger;
     public string targetScene = "Scene3-LightEffect";
     public GameObject VRplayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        MocapSceneChanger = GameObject.Find("MocapSceneChanger").GetComponent<MocapSceneChanger>();
+        //MocapSceneChanger = GameObject.Find("MocapSceneChanger").GetComponent<MocapSceneChanger>();
         if (photonView.IsMine) {
 
             //GameObject client = transform.Find("Client - OptiTrack");
