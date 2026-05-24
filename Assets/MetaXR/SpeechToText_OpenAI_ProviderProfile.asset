@@ -16,7 +16,7 @@ MonoBehaviour:
   apiKey: 
   overrideApiKey: 1
   apiRoot: https://api.openai.com/v1/audio/transcriptions
-  model: whisper-1
+  model: tts-1
   supportsVision: 1
   inlineRemoteImages: 1
   resolveRemoteRedirects: 1
@@ -24,7 +24,7 @@ MonoBehaviour:
   sttResponseFormat: text
   sttLanguage: ko
   sttTemperature: 0
-  ttsVoice: fable
+  ttsVoice: ash
   ttsOutputFormat: mp3
   ttsSpeed: 1
   ttsInstructions: 
