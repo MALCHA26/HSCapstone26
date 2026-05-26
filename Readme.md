@@ -1,0 +1,141 @@
+# 🔥 불씨(The Spark)
+
+> 독립운동가 “이종일” 선생님의 업적을 알리기 위해 제작된 전시형 역사 콘텐츠
+> 
+
+[Unity](https://img.shields.io/badge/Unity-2022.3+-000000?style=flat-square&logo=unity&logoColor=white)
+
+[Platform](https://img.shields.io/badge/Platform-PC%20%7C%20Android%20%7C%20WebGL-blue?style=flat-square)
+
+[License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+
+---
+
+## 📖 프로젝트 소개
+
+이종일 선생님은 3·1운동의 핵심 인물로서 독립선언서 인쇄 및 배포를 주도하고, 최초의 한글 신문 창간과 학교 설립 등 조국의 독립을 위해 다방면에서 헌신하셨습니다. 그러나 이러한 업적에 비해 대중적으로 충분히 알려지지 못했음을 확인했습니다.  
+
+본 프로젝트 '불씨(The Spark)'는 자료조사 과정에서 이러한 점에 주목하여, 이종일 선생님의 업적을 보다 많은 사람들에게 효과적으로 알리고 싶다고 생각했습니다. 
+이를 위해 기존 역사 전시 콘텐츠의 한계 또한 검토하였습니다. 기존 콘텐츠는 관람객이 정보를 일방적으로 수용하는 평면적인 형식에 머물러 있으며, VR 콘텐츠조차 단순 관람형 체험을 벗어나지 못하는 경우가 많습니다. 이러한 방식은 관람객의 몰입도와 역사적 공감대 형성에 명확한 한계가 있습니다.
+
+이 두 가지 문제를 함께 해결하고자, 이종일 선생님의 대표적인 업적인 독립선언서 인쇄와 배포 과정을 VR 기반 체험형 콘텐츠로 제작하기로 기획하였습니다.
+
+본 프로젝트는 실시간 모션 캡처, VR 인터랙션, 생성형 AI 등 다양한 기술을 융합하여 높은 몰입도의 역사 체험 콘텐츠를 구현하고, 이를 통해 이종일 선생님의 업적을 널리 알리는 것을 목표로 합니다.
+Photon 기반 네트워크 환경에서 인터랙션 데이터를 실시간으로 동기화하여, 실제 배우의 움직임이 반영된 NPC와 자연스럽게 상호작용할 수 있도록 구현하였습니다. 이를 통해 사용자가 1919년 3·1운동 당시의 현장 분위기를 직접 체험하고 역사의 주인공이 되는 경험을 제공합니다.
+또한 메타 퀘스트3와 전용 컨트롤러를 활용하여 독립선언서를 집어 옮기거나 수레를 운반하는 등 사용자가 직접 참여하는 물리 기반 인터랙션을 제공합니다. 여기에 OpenAI 기반 STT·TTS 기술을 결합하여 역사적 현장의 인물 및 환경과 실시간으로 소통하는 듯한 실재감을 더하였습니다. 이를 통해 단순 관람형 콘텐츠를 넘어, 사용자가 역사적 사건의 흐름에 직접 개입하는 체험 중심의 학습 환경을 구축하고자 하였습니다.
+
+---
+
+## 🎬 데모 영상 & 스크린샷
+
+> 영상 링크 또는 GIF를 삽입하세요.
+> 
+
+[제목 없음](https://www.notion.so/3682abae1e8f804c97bbda67b3b547f4?pvs=21)
+
+---
+
+## ⚙️ 기술 스택
+
+| 분야 | 사용 기술 |
+| --- | --- |
+| 엔진 | Unity 6000.3 10f1 LTS |
+| 언어 | C# |
+| 모션 캡처 | Motive |
+| AI  | Open AI |
+| 멀티 환경 구축 | photon |
+| 버전 관리 | Git, GitHub |
+| 협업 | Notion / Discord |
+
+![image.png](attachment:c9dd560a-f475-4308-acfc-0dbd7e794a34:image.png)
+
+---
+
+## 🗂️ 폴더 구조
+
+```
+Assets/
+├── Scripts/
+│   ├── Player/
+│   ├── Enemy/
+│   ├── UI/
+│   └── Manager/
+├── Scenes/
+├── Prefabs/
+├── Art/
+│   ├── Sprites/
+│   └── Materials/
+├── Audio/
+└── Resources/
+```
+
+---
+
+## 🕹️ 조작 방법
+
+| 키 / 입력 | 동작 |
+| --- | --- |
+| 컨트롤러 Grip 버튼 | (사용자) 프로젝트 내의 모든 상호작용 |
+| `E`  | 2 씬에서 3 씬으로 넘어가는 키 |
+| `Q` , `W` , `D`, `R`  | 3 씬에서의 조명, 나레이션 조작 |
+
+---
+
+## 📅 개발 일정
+
+| 단계 | 기간 | 내용 |
+| --- | --- | --- |
+| 기획 | 2026.02 ~ 2026.03 | 주제 선정 및 아이디어 구체화 |
+| 프로토타입 | 2026.03 ~ 2026.04 | 환경 구축 및 핵심 기능 프로토타입 설계  |
+| 알파 | 2026.04 ~ 2026.05 | 주요 기능 완성 |
+| 베타 | 2026.05~ | 버그 수정 및 테스트, 사용자 의견 수집 |
+| 최종 발표 | 2026.06.05 | 발표 및 시연 |
+
+---
+
+## 👥 팀 소개
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/seungyun27">
+        <img src="https://github.com/seungyun27.png" width="100px;" alt="팀원1"/><br />
+        <sub><b>김승윤</b></sub>
+      </a><br />
+      <sub>역할: 팀장 / 씬 로직 구현 및 시청각 연출, 시스템 통합 관리</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/joyeeon">
+        <img src="https://github.com/joyeeon.png" width="100px;" alt="팀원2"/><br />
+        <sub><b>조희연</b></sub>
+      </a><br />
+      <sub>역할: 실시간 모션 캡처 캐릭터 연동 및 Photon 기반 네트워크 동기화 구현</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/SonDaHyeL">
+        <img src="https://github.com/SonDaHyeL.png" width="100px;" alt="팀원3"/><br />
+        <sub><b>손다혜</b></sub>
+      </a><br />
+      <sub>역할: VR 레벨 디자인 및 시나리오 스크립트 구성 / UI</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/daylong3220">
+        <img src="https://github.com/daylong3220.png" width="100px;" alt="팀원4"/><br />
+        <sub><b>박종일</b></sub>
+      </a><br />
+      <sub>역할: AI 대화 시스템 프로토타입 제작 및 오디오 리소스 구축</sub>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 🙏 참고 자료
+
+[3.1운동을 준비한 선각자가 후손들을 기다리고 있다 - 민중의소리](https://vop.co.kr/A00000364838.html)
+
+[‘기미독립선언서’ 인쇄한 보성사, 그 터를 찾아서｜주간동아](https://weekly.donga.com/society/article/all/11/1648304/1)
+
+[USCO](https://www.usco.kr/pediaView?idx=32)
+
+[[1919 한겨레] 족보 밑에 숨긴 선언서 발각 직전 정전…위기의 순간들](https://www.hani.co.kr/arti/society/society_general/883933.html)
