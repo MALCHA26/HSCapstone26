@@ -134,7 +134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1497855
 Transform:
   m_ObjectHideFlags: 0
@@ -8613,7 +8613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d0de5e1499d654e96b2f8749171650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Scene3Changer
-  nextSceneName: Scene3-2
+  nextSceneName: Scene4
   targetTag: Cart
 --- !u!33 &13728656486141560
 MeshFilter:
@@ -79790,7 +79790,7 @@ MonoBehaviour:
   _speedFactor: 30
   _crouchSpeedFactor: 10
   _runningSpeedFactor: 50
-  _acceleration: 5
+  _acceleration: 2
   _groundDamping: 40
   _jumpDamping: 0
   _airDamping: 1
