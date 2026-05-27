@@ -14,10 +14,11 @@ public class VR3DObjectTouch : MonoBehaviour
     // 1. [실제 VR 환경] 컨트롤러가 3D 오브젝트 영역에 들어왔을 때 작동
     private void OnTriggerEnter(Collider other)
     {
+        string nameLower = other.name.ToLower();
         // 메타 XR 리그의 컨트롤러나 손 오브젝트 이름/태그를 필터링합니다.
-        if (other.name.Contains("Hand") || other.name.Contains("Controller") || other.CompareTag("Player"))
+        if (nameLower.Contains("hand") || nameLower.Contains("anchor") || nameLower.Contains("right"))
         {
-            Debug.Log($"[VR 터치] {other.name} 가 오브젝트에 닿았습니다!");
+            Debug.Log($"[VR 터치]가 오브젝트에 닿았습니다!");
             voi.more();
         }
     }
