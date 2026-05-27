@@ -28857,7 +28857,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1135187000}
   - component: {fileID: 1135187001}
-  - component: {fileID: 1135187002}
   m_Layer: 0
   m_Name: StartingTTS
   m_TagString: Untagged
@@ -28977,19 +28976,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1135187002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135186999}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3c684f5f71c294e96c8cc457d79fb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  startTTS: {fileID: 1135187001}
 --- !u!1 &1139903657
 GameObject:
   m_ObjectHideFlags: 0

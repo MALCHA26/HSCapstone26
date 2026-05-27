@@ -2907,51 +2907,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1883435954744430120, guid: 604ba7d53a8aba5449b85536a4917a20, type: 3}
   m_PrefabInstance: {fileID: 1278909082}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1295333045
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1295333047}
-  - component: {fileID: 1295333046}
-  m_Layer: 0
-  m_Name: FadeOut
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1295333046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1295333045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f659934a7417f644c92711a255ca7214, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FadeOut
-  nextSceneName: Scene4
---- !u!4 &1295333047
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1295333045}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.17488, y: -0, z: 2.63611}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1300750110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3741,50 +3696,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7645791980720725798, guid: f31744d1b4f570f43961c7ff81162f5b, type: 3}
   m_PrefabInstance: {fileID: 1571607553}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1624472738
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1624472740}
-  - component: {fileID: 1624472739}
-  m_Layer: 0
-  m_Name: FadeInManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1624472739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624472738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e62aa5480aa49814eabc5afae5693bed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FadeInManager
---- !u!4 &1624472740
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624472738}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.43038, y: 1.56809, z: 2.20975}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1759303876
 GameObject:
   m_ObjectHideFlags: 0
@@ -4892,7 +4803,5 @@ SceneRoots:
   - {fileID: 1232835841}
   - {fileID: 475282245}
   - {fileID: 413811894}
-  - {fileID: 1624472740}
-  - {fileID: 1295333047}
   - {fileID: 719781000}
   - {fileID: 267982926}

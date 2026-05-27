@@ -1,10 +1,10 @@
 /*
-작성자: 김승윤(수정 반영)
-역할: 카트와 문 충돌하면 포톤 플레이어 정리 후 씬 이동 
-*/
+ * 작성자: 김승윤(수정 반영)
+ * 역할: 카트와 문 충돌하면 포톤 플레이어 정리 후 씬 이동 
+ */
 using UnityEngine;
 using UnityEngine.SceneManagement; 
-using Photon.Pun; // 1. 포톤 기능을 쓰기 위해 추가
+using Photon.Pun; 
 
 public class Scene3Changer : MonoBehaviour
 {
@@ -26,10 +26,10 @@ public class Scene3Changer : MonoBehaviour
                 screenFade3.FadeOut();
             }
 
-            // 2. 씬을 넘어가기 전에 기존 멀티플레이어 오브젝트 정리
+            // 씬을 넘어가기 전에 기존 멀티플레이어 오브젝트 정리
             DestroyLocalPlayer();
 
-            // 3. 씬 이동
+            // 씬 이동
             ChangeScene();
         }
     }
