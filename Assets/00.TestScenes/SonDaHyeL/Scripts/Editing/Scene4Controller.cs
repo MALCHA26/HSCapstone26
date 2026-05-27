@@ -21,6 +21,7 @@ public class Scene4Controller : AllSceneController
 
     [SerializeField] private GameObject answer_box;
     [SerializeField] private TextMeshPro answer_block;
+    [SerializeField] private TextMeshPro pro;
 
 
     //public TextMeshProUGUI an_box;
@@ -42,6 +43,7 @@ public class Scene4Controller : AllSceneController
         videoCanvas.SetActive(false);
         answer_box.SetActive(true);
         answer_block.gameObject.SetActive(true);
+        pro.gameObject.SetActive(true);
         //QACanvas.SetActive(true);
 
         // 2. AI 답변 수신 시 TTS + 버튼 제어 연결
