@@ -2,15 +2,29 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Grabbable
+  - GaugeCanvas
+  - GaugeImg
+  - VoiceUI
+  - Bullet
+  - script
+  - Cart
+  - Pickup
+  - Camera
+  - PRINTER
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Cart
   - Water
   - UI
+  - Ground
+  - Overlay UI
+  - VRBody
+  - Books
   - 
   - 
   - 
@@ -32,14 +46,13 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - OVROverlayCanvas Rendering
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: glow
+    uniqueID: 437675711
     locked: 0
   m_RenderingLayers:
   - Default
@@ -50,27 +63,3 @@ TagManager:
   - Light Layer 5
   - Light Layer 6
   - Light Layer 7
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 

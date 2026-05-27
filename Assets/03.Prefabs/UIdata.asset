@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98e8b618df276347a65c7410b978a2a, type: 3}
+  m_Name: UIdata
+  m_EditorClassIdentifier: Assembly-CSharp::UIdata
+  interactionNodes:
+  - nodeID: 1Scenegrab
+    guideText: "\uADF8\uB7A9 \uAE30\uB2A5\uC744 \uC774\uC6A9\uD574\uC11C \uC7A1\uC544\uBCF4\uC138\uC694."
+    highlightColor: {r: 1, g: 0.8833674, b: 0.6462264, a: 1}
+  - nodeID: 1Sceneprint
+    guideText: "\uD504\uB9B0\uD130\uAE30 \uC548\uC5D0 \uB123\uC5B4\uBCF4\uC138\uC694."
+    highlightColor: {r: 1, g: 0.86998254, b: 0.56078434, a: 1}
+  - nodeID: 2Scenebook
+    guideText: "\uADF8\uB7A9 \uAE30\uB2A5\uC744 \uC774\uC6A9\uD574\uC11C \uC7A1\uC544\uBCF4\uC138\uC694."
+    highlightColor: {r: 1, g: 0.86998254, b: 0.56078434, a: 1}

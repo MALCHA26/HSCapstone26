@@ -6,8 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/01.Scenes/GuideScene.unity
+    guid: f4f6e3cacc3c5d3408e2b9a77fcc278c
+  - enabled: 1
+    path: Assets/01.Scenes/Scene1.unity
+    guid: e82fd92f7238875419d8ca277e64b429
+  - enabled: 1
+    path: Assets/01.Scenes/Scene2-LightEffect.unity
+    guid: 953ba20856197684887f7a8ea48e9841
+  - enabled: 1
+    path: Assets/01.Scenes/Scene3-LightEffect.unity
+    guid: 36136b03cd42f814f973764ceba46921
+  - enabled: 1
+    path: Assets/01.Scenes/Scene4.unity
+    guid: 1732955fb3d126e45ac6618e699ac45e
+  - enabled: 1
+    path: Assets/01.Scenes/Lobby.unity
+    guid: f35968bb11f3801439ed2c3168b9d368
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 44a2782258cd34444b6fd9589edbdc7b, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
