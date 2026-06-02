@@ -23,7 +23,7 @@ Photon 기반 네트워크 환경에서 인터랙션 데이터를 실시간으�
 
 ## 🎬 데모 영상 & 스크린샷
 
-youtube.com/watch?v=lZEMX5y74UU&source_ve_path=MjM4NTE&embeds_referring_euri=https%3A%2F%2Fwww.notion.so%2F
+[![Video Label](http://img.youtube.com/vi/lZEMX5y74UU'/0.jpg)](https://youtu.be/lZEMX5y74UU)
 
 
 ---
