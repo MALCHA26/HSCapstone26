@@ -21,9 +21,11 @@ Photon 기반 네트워크 환경에서 인터랙션 데이터를 실시간으�
 
 ---
 
-## 🎬 데모 영상 & 스크린샷
+## 🎬 데모 영상 
 [![Video Label](http://img.youtube.com/vi/OVeq-ZZT-Ak/0.jpg)](https://youtu.be/OVeq-ZZT-Ak)
-클릭하면 영상으로 넘어갑니다.
+
+
+## 📷 스크린샷
 
 
 <img width="1055" height="595" alt="스크린샷 2026-06-02 143911" src="https://github.com/user-attachments/assets/5d7f92ba-a84e-4006-b3a6-f6edab73af34" />
